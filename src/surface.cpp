@@ -154,7 +154,7 @@ void Surface::blitScaled(Surface &destination, int x, int y, int w, int h, int a
   bmask = 0x00ff0000;
   amask = 0xff000000;
 #endif
-  SDL_Surface *tempsrc=SDL_CreateRGBSurface(SDL_SWSURFACE | SDL_SRCALPHA, w, h, 32, bmask, gmask, rmask, amask);
+  SDL_Surface *tempsrc=SDL_CreateRGBSurface(SDL_HWSURFACE | SDL_SRCALPHA | SDL_RLEACCEL, w, h, 32, bmask, gmask, rmask, amask);
 
   SDL_LockSurface(tempsrc);
   double srcx, srcy;
@@ -168,7 +168,7 @@ void Surface::blitScaled(Surface &destination, int x, int y, int w, int h, int a
     }
   }
   SDL_UnlockSurface(tempsrc);
-
+  SDL_SetAlpha(tempsrc, SDL_SRCALPHA|SDL_RLEACCEL, a);
 
   SDL_Rect dest = { static_cast<Sint16>(x), static_cast<Sint16>(y), 0, 0};
   SDL_BlitSurface(tempsrc,NULL,destination.raw,&dest);

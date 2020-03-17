@@ -503,6 +503,7 @@ void GMenu2X::readConfig(string conffile) {
 	evalIntConf( confInt, "buttonRepeatRate", 10, 0, 20 );
 	evalIntConf( confInt, "videoBpp", 32, 16, 32 );
 	evalIntConf( confInt, "previewType", 1, 1, 2);
+	evalIntConf( confInt, "opacity", 128, 0, 255);
 
 	if (confStr["tvoutEncoding"] != "PAL") confStr["tvoutEncoding"] = "NTSC";
 	resX = constrain( confInt["resolutionX"], 320,1920 );
@@ -715,6 +716,8 @@ void GMenu2X::showSettings() {
 	encodings.push_back("NTSC");
 	encodings.push_back("PAL");
 
+  vector<string> previews={"Background","Thumbnail"};
+
 	SettingsDialog sd(this, input, ts, tr["Settings"]);
 	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingMultiString(
 			this, ts, tr["Language"],
@@ -750,6 +753,10 @@ void GMenu2X::showSettings() {
 			this, ts, tr["Preview type"],
 			tr["Type of preview images"],
 			&confInt["previewType"], 1, 2)));
+	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingInt(
+			this, ts, tr["Opacity"],
+			tr["Opacity of preview images"],
+			&confInt["opacity"], 0, 255)));
 
 	if (sd.exec()) {
 #ifdef ENABLE_CPUFREQ
