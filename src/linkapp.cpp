@@ -266,7 +266,14 @@ LinkApp::LinkApp(GMenu2X *gmenu2x_, string const& linkfile, bool deletable)
 			} else if (name == "launchmsg" && !isOpk()) {
 				launchMsg = value;
 			} else if (name == "icon") {    // si es editable no hace falta meter !isOpk()
-				setIcon(value);
+        string::size_type pos;
+        pos=value.rfind("#");
+        if(pos!=string::npos) {
+          if(fileExists(value.substr(0,pos)))
+            setIcon(value);
+        } else {
+          setIcon(value);
+        }
 			} else if (name == "exec" && !isOpk()) {
 				exec = value;
 			} else if (name == "params" && !isOpk()) {
