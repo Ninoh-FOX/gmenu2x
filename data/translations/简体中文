@@ -556,3 +556,7 @@ eduke32=Nukem引擎
 Modern Duke Nukem 3D engine port=Duke Nukem 3D引擎端口
 User manual=用户手册
 HDMI=高清晰视频
+Preview type=预览类型
+Type of preview images=预览图像类型
+Opacity=不透明度
+Opacity of preview images=预览图像的不透明度
