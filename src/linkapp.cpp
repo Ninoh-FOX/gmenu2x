@@ -144,11 +144,13 @@ LinkApp::LinkApp(GMenu2X *gmenu2x_, string const& linkfile, bool deletable)
 						|| !strncmp(key, ("Name[" + gmenu2x->tr["Lng"] +
 								"]").c_str(), lkey)) {
 				title = buf;
+				title_orig = buf;
 
 			} else if ((!strncmp(key, "Comment", lkey) && description.empty())
 						|| !strncmp(key, ("Comment[" +
 								gmenu2x->tr["Lng"] + "]").c_str(), lkey)) {
 				description = buf;
+				description_orig = buf;
 
 			} else if (!strncmp(key, "Terminal", lkey)) {
 				consoleApp = !strncmp(val, "true", lval);
@@ -376,12 +378,16 @@ bool LinkApp::save() {
 	// if (!title.empty()       ) out << "title="           << title           << endl;     // hasta aquí... si ponemos la línea aquí,
   if (!title.empty() && edited_title)
     out << "title=" << title << endl;
-  else
-    out << "title=" << title_orig << endl;
+  else {
+    if(!title_orig.empty())
+      out << "title=" << title_orig << endl;
+  }
 	if (!description.empty() && edited_description)
     out << "description=" << description << endl;
-  else
-    out << "description=" << description_orig << endl;
+  else {
+    if(!description_orig.empty())
+      out << "description=" << description_orig << endl;
+  }
 
 	if (!manual.empty()      ) out << "manual="          << manual          << endl;
 	if (!icon.empty()        ) out << "icon="            << icon            << endl;
