@@ -42,6 +42,8 @@ Link::Link(GMenu2X *gmenu2x, Action action)
 	rect.w = gmenu2x->skinConfInt["linkWidth"];
 	rect.h = gmenu2x->skinConfInt["linkHeight"];
 	edited = false;
+	edited_title=false;
+	edited_description=false;
 	iconPath = gmenu2x->sc.getSkinFilePath("icons/generic.png");
 	iconX = 0;
 	padding = 0;
@@ -94,8 +96,12 @@ const string &Link::getTitle() {
 }
 
 void Link::setTitle(const string &title) {
-	this->title = title;
-	edited = true;
+  if(title!=this->title)
+  {
+    this->title = title;
+    edited = true;
+    edited_title=true;
+  }
 }
 
 const string &Link::getDescription() {
@@ -103,8 +109,12 @@ const string &Link::getDescription() {
 }
 
 void Link::setDescription(const string &description) {
-	this->description = description;
-	edited = true;
+  if(description!=this->description)
+  {
+    this->description = description;
+    edited = true;
+    edited_description=true;
+  }
 }
 
 const string &Link::getLaunchMsg() {

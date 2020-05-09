@@ -257,8 +257,10 @@ LinkApp::LinkApp(GMenu2X *gmenu2x_, string const& linkfile, bool deletable)
                                    //   if(title!="")         // si está editado, lo cargamos
                                    //     title=value;*/
 			else if (name == "title") {
+        title_orig=value;
 				title = gmenu2x->tr[value];
 			} else if (name == "description") {
+        description_orig=value;
 				description = gmenu2x->tr[value];
                                    // y estas líneas que se cargan siempre del opk, habría que añadir algo para que no se sobreescriban
                                    // con datos de .gmenu2x
@@ -370,8 +372,15 @@ bool LinkApp::save() {
 
 	}
 	// if (!title.empty()       ) out << "title="           << title           << endl;     // hasta aquí... si ponemos la línea aquí,
-    if (!title.empty()       ) out << "title="           << title           << endl; // se guarda el nombre editado
-	if (!description.empty() ) out << "description="     << description     << endl;
+  if (!title.empty() && edited_title)
+    out << "title=" << title << endl;
+  else
+    out << "title=" << title_orig << endl;
+	if (!description.empty() && edited_description)
+    out << "description=" << description << endl;
+  else
+    out << "description=" << description_orig << endl;
+
 	if (!manual.empty()      ) out << "manual="          << manual          << endl;
 	if (!icon.empty()        ) out << "icon="            << icon            << endl;
 	if (selectorfilter != "*") out << "selectorfilter="  << selectorfilter  << endl;

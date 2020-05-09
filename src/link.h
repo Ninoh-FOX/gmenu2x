@@ -68,6 +68,8 @@ public:
 protected:
 	GMenu2X *gmenu2x;
 	bool edited;
+	bool edited_title, edited_description;
+	std::string title_orig, description_orig;
 	std::string title, description, launchMsg, icon, iconPath;
 
 	OffscreenSurface *iconSurface;
