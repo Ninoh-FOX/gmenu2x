@@ -153,7 +153,9 @@ LinkApp::LinkApp(GMenu2X *gmenu2x_, string const& linkfile, bool deletable)
 			} else if (!strncmp(key, "Terminal", lkey)) {
 				consoleApp = !strncmp(val, "true", lval);
 
-			} else if (!strncmp(key, "X-OD-Manual", lkey)) {
+			} else if ((!strncmp(key, "X-OD-Manual", lkey) && description.empty())
+						|| !strncmp(key, ("X-OD-Manual[" +
+								gmenu2x->tr["Lng"] + "]").c_str(), lkey)) {
 				manual = buf;
 
 			} else if (!strncmp(key, "Icon", lkey)) {
