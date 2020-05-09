@@ -257,9 +257,9 @@ LinkApp::LinkApp(GMenu2X *gmenu2x_, string const& linkfile, bool deletable)
                                    //   if(title!="")         // si está editado, lo cargamos
                                    //     title=value;*/
 			else if (name == "title") {
-				title = value;
+				title = gmenu2x->tr[value];
 			} else if (name == "description") {
-				description = value;
+				description = gmenu2x->tr[value];
                                    // y estas líneas que se cargan siempre del opk, habría que añadir algo para que no se sobreescriban
                                    // con datos de .gmenu2x
                                    // } else if (name == "launchmsg" && !isOpk()) {
