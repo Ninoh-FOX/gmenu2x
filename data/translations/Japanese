@@ -273,3 +273,7 @@ Opacity=不透明な
 Opacity of preview images=プレビュー画像の不透明な
 Change keys=変更キー
 Show manual of $1=$1のマニュアルを表示
+Show the section info bar in the launcher view=ランチャービューにセクション情報バーを表示する
+Show section icons=セクションアイコンを表示
+Show clock=時計を表示
+Show Folders=フォルダを表示
