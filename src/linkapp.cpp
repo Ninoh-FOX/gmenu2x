@@ -212,6 +212,15 @@ LinkApp::LinkApp(GMenu2X *gmenu2x_, string const& linkfile, bool deletable)
 					DEBUG("Compatible extensions: %s\n", selectorfilter.c_str());
 				}
 
+				/* If using expresion MimeType=custom/ followed by extensions, use that filter */
+				if(selectorfilter=="" && string(buf).substr(0,7)=="custom/") {
+          selectorfilter=string(buf).substr(7);
+          while (!selectorfilter.empty() &&
+                (selectorfilter.substr(selectorfilter.size()-1,1)==";" || selectorfilter.substr(selectorfilter.size()-1,1)==",")) {
+            selectorfilter.erase(selectorfilter.end());
+          }
+				}
+
 				continue;
 			}
 #endif /* HAVE_LIBXDGMIME */
