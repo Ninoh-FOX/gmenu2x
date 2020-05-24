@@ -504,6 +504,7 @@ void GMenu2X::readConfig(string conffile) {
 	evalIntConf( confInt, "videoBpp", 32, 16, 32 );
 	evalIntConf( confInt, "previewType", 1, 1, 2);
 	evalIntConf( confInt, "opacity", 128, 0, 255);
+	evalIntConf( confInt, "brightness", readBrightConfig(), 10, 200);
 
 	if (confStr["tvoutEncoding"] != "PAL") confStr["tvoutEncoding"] = "NTSC";
 	resX = constrain( confInt["resolutionX"], 320,1920 );
@@ -603,6 +604,29 @@ void GMenu2X::writeTmp(int selelem, const string &selectordir) {
 		if (!selectordir.empty())
 			inf << "selectordir=" << selectordir << endl;
 		inf.close();
+	}
+}
+
+int GMenu2X::readBrightConfig() {
+  int brightval=0;
+	FILE *brightHandle = NULL;
+
+	brightHandle = fopen("/sys/class/backlight/pwm-backlight/brightness", "r");
+	if (brightHandle) {
+		fscanf(brightHandle, "%d", &brightval);
+		fclose(brightHandle);
+	}
+
+	return brightval;
+}
+
+void GMenu2X::writeBrightConfig(int brightval) {
+	FILE *brightHandle = NULL;
+
+	brightHandle = fopen("/sys/class/backlight/pwm-backlight/brightness", "w");
+	if (brightHandle && brightval>=10 && brightval<=200) {
+		fprintf(brightHandle, "%d", brightval);
+		fclose(brightHandle);
 	}
 }
 
@@ -757,6 +781,10 @@ void GMenu2X::showSettings() {
 			this, ts, tr["Opacity"],
 			tr["Opacity of preview images"],
 			&confInt["opacity"], 0, 255)));
+	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingInt(
+			this, ts, tr["Brightness"],
+			tr["Screen brightness"],
+			&confInt["brightness"], 10, 200, 10)));
 
 	if (sd.exec()) {
 #ifdef ENABLE_CPUFREQ

@@ -89,6 +89,11 @@ bool MenuSettingInt::handleButtonPress(InputManager::Button button)
 		default:
 			return false;
 	}
+  // Brightness is changed in real time
+  if(name=="Brightness") {
+    gmenu2x->writeBrightConfig(value());
+  }
+
 	return true;
 }
 

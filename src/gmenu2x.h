@@ -148,6 +148,10 @@ public:
 	PowerSaver powerSaver;
 	InputManager input;
 
+	// Brightness
+  int readBrightConfig();
+	void writeBrightConfig(int brightval);
+
 	//Configuration hashes
 	ConfStrHash confStr, skinConfStr;
 	ConfIntHash confInt, skinConfInt;
