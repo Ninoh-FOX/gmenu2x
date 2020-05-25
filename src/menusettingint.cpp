@@ -66,6 +66,12 @@ MenuSettingInt::MenuSettingInt(
 
 void MenuSettingInt::draw(int valueX, int y, int h)
 {
+  // Check if crightness changed
+  if(name==gmenu2x->tr["Brightness"]) {
+    int bright=gmenu2x->readBrightConfig();
+    if(value()!=bright)
+      setValue(bright);
+  }
 	Surface& s = *gmenu2x->s;
 	MenuSetting::draw(valueX, y, h);
 	gmenu2x->font->write(s, strvalue, valueX, y, Font::HAlignLeft, Font::VAlignTop);
@@ -73,6 +79,10 @@ void MenuSettingInt::draw(int valueX, int y, int h)
 
 bool MenuSettingInt::handleButtonPress(InputManager::Button button)
 {
+  // Brightness is changed in real time
+  if(name==gmenu2x->tr["Brightness"]) {
+    setValue(gmenu2x->readBrightConfig());
+  }
 	switch (button) {
 		case InputManager::LEFT:
 			dec();
