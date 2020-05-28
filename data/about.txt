@@ -9,7 +9,7 @@ English & Italian by Massimiliano Torromeo
 French by Paul Cercueil
 Danish by claus
 Dutch by superfly
-Spanish by pedator, RafaVico
+Spanish by pedator, RafaVico, Ninoh-FOX
 Portuguese (Portugal) by NightShadow
 Slovak by Jozef
 Swedish by Esslan and Micket
@@ -18,3 +18,7 @@ Finnish by Jontte and Atte
 Norwegian by Lithium Flower
 Russian by XaMMaX90
 Polish by Artur Rojek
+Korean by MrGiKILL
+Simplified Chinese by --data no found--, update by Ninoh-FOX and Google translation.
+Traditional Chinese by --data no found--, update by Ninoh-FOX and Google translation.
+Japanese by --data no found--, update by Ninoh-FOX and Google translation.
