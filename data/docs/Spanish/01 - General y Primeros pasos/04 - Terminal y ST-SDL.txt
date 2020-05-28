@@ -1,0 +1,19 @@
+Existen estas dos aplicaciones, aunque son parecidas su finalizad no es la misma:
+
+Terminal: Esta aplicación desactiva el modo gráfico (Gmenu2x) para que el usuario pueda conectarse mediante SSH a la consola y lanzar aplicaciones.
+
+ST-SDL: Es la terminal básica de GMenu2x, incluye un teclado virtual y nos permitirá ejecutar cualquier orden de linux.
+
+Con lo que Terminal es para usar la terminal de forma remota y St-SDL es para usar la terminal de forma local.
+
+Lista de órdenes básicas, puedes ampliar la información de las mismas usando "orden --help":
+
+cd - cambia de directorio
+ls - lista los archivos de la carpeta
+cat - visualiza un archivo de texto desde la terminal
+touch - crea un archivo vacío
+mkdir - crea un directorio
+cp - copia un archivo
+mv - mueve un archivo
+rm - elimina un archivo
+clear - limpia la pantalla de órdenes

@@ -1,0 +1,12 @@
+La consola y su sistema 
+
+La rg350 es una consola con un sistema operativo libre llamado genéricamente opendingux, este es un fork de openWRT creado en 2010 para el Ben Nanonote de QI Hardware y fue usado por primera vez en el 2011 en la consola dingoo a320 (De ahí su nombre).
+
+Opendingux es como decir el Windows refiriéndose al sistema operativo ya que cada distribución va acorde al hardware de la consola. 
+
+Al ser un sistema de código abierto no existe tal cosa como una versión oficial, si no que varias, adaptadas, en el caso de la Rg350 igual. En este caso solemos usar la rogue edition, mantenida por los usuarios Ninoh-FOX y RafaVico.
+
+Opendingux usa una interfaz gráfica básica llamada gmenu2x, basada en la versión de gmenu2x lanzada para el ordenador de bolsillo Ben nanonote en 2010 que a su vez está basada en la original lanzada para la consola open source gp2x en el año 2008.
+
+De igual modo hay más interfaces como simplemenu, creada y mantenida por el usuario FGL82.
+

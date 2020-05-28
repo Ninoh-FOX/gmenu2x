@@ -1,0 +1,11 @@
+Listado de aplicaciones específico de ROGUE. Aunque quizás las encuentres en otras distribuciones.
+
+RG350TEST: Un test de hardware creado por RafaVico específico para la RG350 que a parte de funcionar con todos los botones, evita el bug del scroll infinito ocasionado por la aplicación HWTest incluída en base.
+
+ScriptRunner: Una selección de scripts útiles para el sistema, hacer backups, formatear la tarjeta externa, etc.
+
+ROGUEAPPSTORE: Un "Store" con aplicaciones para la RG350
+
+ROGUE Connect: Un fork de GCW ZERO CONNECT para configurar una conexión mediante un dongle WIFI.
+
+ROGUE Updater: Actualizador automático de ROGUE, baja las últimas actualizaciones unsando WIFI.

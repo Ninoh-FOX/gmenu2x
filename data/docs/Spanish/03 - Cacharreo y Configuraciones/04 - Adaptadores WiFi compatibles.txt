@@ -1,0 +1,7 @@
+Adaptadores WiFi compatibles (listados en directorio /lib/modules/3.12.0-dingux\+/kernel/drivers/net/wireless/):
+
+Realtek RTL8188EU 150Mb/s (BASE y ROGUE)
+
+Realtek RTL8188FU 150Mb/s (SÓLO ROGUE)
+
+Realtek RTL8192CU 300Mb/s (BASE y ROGUE)

@@ -1,0 +1,10 @@
+Tarjetas de memoria micro sd
+
+Las consolas incluyen 2 ranuras para tarjetas de memoria micro sd, una interna y otra externa, cada una con sus funcionalidades:
+
+Interna: En ella se instala el sistema y algunos archivos necesarios para los juegos o emuladores. (partidas guardadas o datos de Quake, por ejemplo) En la versión normal se ha de desmontar la consola para acceder a ella pero en la RG350M es de fácil acceso ya que se encuentra en una ranura externa.
+
+Externa: El resto de aplicaciones, música, roms y demás. 
+
+
+

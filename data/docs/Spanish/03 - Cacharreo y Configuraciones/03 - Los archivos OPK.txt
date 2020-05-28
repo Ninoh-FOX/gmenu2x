@@ -1,0 +1,57 @@
+Los archivos .OPK
+
+Las aplicaciones en la rg350 van en un archivo con extensión opk, este es un archivo comprimido en squashfs (https://es.m.wikipedia.org/wiki/Squashfs) que incluye el ejecutable, los iconos, archivos del programa y librerías así como un archivo .Desktop que es el que vemos en gmenu2x y otros launchers (el acceso directo). Cada archivo opk puede contener varios archivos .Desktop.
+
+Cuando abrimos un archivo opk la consola ejecuta el comando opkrun que descomprime el archivo OPK en la carpeta /mnt/.
+
+Para editar un archivo opk necesitamos descomprimir el opk usando unsquashfs nombre.opk y ahí se crea una carpeta, luego editamos el archivo .Desktop con el nombre deseado, el icono deseado o cualquier otro cambio, guardamos y lo volvemos a comprimir usando mksquashfs /rutacarpeta archivo.opk 
+
+Los archivos desktop tienen esta forma:
+
+====================================
+[Desktop Entry]
+Name=LGPT
+Comment=LGPT "Piggy" Music Tracker
+Exec=lgpt
+Terminal=true
+Type=Application
+StartupNotify=true
+Icon=littlegptracker
+Categories=applications;
+X-OD-Manual=readme.txt
+X-OD-Manual[es]=leeme.txt
+Name[es]=LGPT
+Comment[es]=Tracker Musical LGPT "Piggy"
+====================================
+
+Como podéis ver es el archivo OPK de LittleGPTracker.
+
+Cada línea se explica a continuación.
+
+====================================
+[Desktop Entry]=LE DICE AL LANZADOR QUE ES UN ACCESO DIRECTO
+
+Name=NOMBRE QUE SE MOSTRARÁ EN GMENU2X (EN INGLES)
+
+Comment=DESCRIPCION QUE SE MOSTRARÁ EN GMENU2X (EN INGLES)
+
+Exec=PROGRAMA A EJECUTAR (VA DENTRO DEL OPK)
+
+Terminal=ESPECIFICA SI SE EJECUTARÁ EN MODO GRÁFICO O EN MODO TERMINAL
+
+Type=ESPECIFICA EL TIPO DE ARCHIVO QUE ES, GENERALMENTE Application
+
+StartupNotify=(true-false) ESPECIFICA SI SE MUESTRA EL MENSAJE DE LANZAMIENTO
+
+Icon=ESPECIFICA EL NOMBRE DEL ICONO SIN EXTENSIÓN, DEBE SER EN FORMATO PNG Y COMO MÁXIMO 32X32px
+
+Categories=ESPECIFICA LA/LAS CATEGORÍAS DONDE IRÁ
+
+X-OD-Manual=ESPECIFICA EL MANUAL EN INGLÉS 
+
+X-OD-Manual[es]=ESPECIFICA EL MANUAL EN ESPAÑOL
+
+Name[es]=NOMBRE QUE SE MOSTRARÁ EN GMENU2X (EN ESPAÑOL)
+
+Comment[es]=DESCRIPCIÓN QUE SE MOSTRARÁ EN GMENU2X (EN ESPAÑOL)
+====================================

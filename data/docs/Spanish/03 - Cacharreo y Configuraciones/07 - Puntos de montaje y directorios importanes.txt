@@ -1,0 +1,55 @@
+--
+Estos son los puntos de montaje de OpenDingux.
+--
+
+/media/system
+Primera partición de la SD interna
+
+/media/data
+Segunda partición de la SD interna
+
+/media/sdcard
+Primera partición de la SD externa
+
+--
+Esta es una lista de los directorios importantes de OpenDingux.
+--
+
+/media/data/local/home/
+Configuraciones de emuladores, ports y aplicaciones en general. Es el llamado Home del sistema. Enlace simbólico desde /media/home
+
+/media/data/apps/
+Aplicaciones (.opk) instaladas en la tarjeta interna
+
+/media/sdcard/apps/
+Aplicaciones (.opk) instaladas en la tarjeta externa
+
+/usr/share/gmenu2x/sections/ 
+Lanzadores de las aplicaciones y settings preinstaladas en el sistema y que se copian a /media/data/local/home/.gmenu2x/sections
+
+/var/log/messages
+Logs del sistema
+
+/proc/
+Ficheros asociados a procesos en ejecución como cpuinfo que muestra información sobre el procesador
+
+/media/data/local/home/.gmenu2x/skins
+Themes de GMenu2X
+
+/media/data/local/home/.gmenu2x/skins/<tema>/wallpapers/
+Wallpapers
+
+/usr/sbin/frontend_start
+Lanzador de frontend predeterminado
+
+/media/data/local/sbin/frontend_start
+Lanzador de frontend personalizado
+
+/media/home
+Enlace simbólico de /media/data/local/home
+
+/usr/local
+Enlacce simbólico de /media/data/local
+
+/usr/share/scriptrunner/scripts
+Scripts preinstalados en ScriptRunner

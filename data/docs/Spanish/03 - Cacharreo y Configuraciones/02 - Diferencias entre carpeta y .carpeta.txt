@@ -1,0 +1,7 @@
+Diferencias entre /carpeta y /.carpeta
+
+En algunas ocasiones nos habremos encontrado con alguna carpeta cuyo nombre lleva un punto delante, esto no es nada raro ni ningún error, es simplemente la forma de "ocultar" carpetas por defecto de gnu-linux.
+
+Estas carpetas por ejemplo serán vistas por DinguxCommander pero serán ocultadas en el selector de ficheros de Gemnu2x por defecto.
+
+Generalmente están en la carpeta /media/home/ y es donde se guardan las configuraciones de las aplicaciones, configuraciones, savestates, etc.

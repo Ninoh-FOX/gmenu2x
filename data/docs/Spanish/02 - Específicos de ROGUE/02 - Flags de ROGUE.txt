@@ -1,0 +1,16 @@
+Existen 5 ficheros ocultos en el directorio /media/data que sirven para activar varias tareas de mantenimiento/instalación inicial durante el arranque. Para reactivarlos sólo hay que borrar el fichero correspondiente que se crea al finalizar la operación:
+
+.clean
+Comprobación del sistema de ficheros.
+
+.linker
+Instala los links para GMenu2X de los programas preinstalados.
+
+.partition_resized
+Redimensiona la partición data de la SD interna para aprovechar todo el espacio disponible en la tarjeta ejecutando este script.
+
+.reconfig
+Borra algunos ficheros residuales SSH, de otros programas y de estado (como el volumen y brillo) ejecutando este script
+
+.swapon
+Crea el fichero para la memoria SWAP ejecutando este script.

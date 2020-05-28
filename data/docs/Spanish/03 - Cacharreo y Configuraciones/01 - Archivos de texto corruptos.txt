@@ -1,0 +1,3 @@
+Linux y Windows utilizan distintos sistemas para codificar los retornos de carro de los ficheros de texto. Si creamos o editamos uno de estos ficheros y luego lo transferimos a la RG350, dependiendo del uso que vaya a tener ese fichero podría no funcionar. Unos ficheros especialmente sensibles son los scripts como el que determina el lanzador de aplicacione predeterminado, es decir /media/data/local/sbin/frontend_start. Para reconvertir los ficheros de texto del formato de Windows al de Linux existe una pequeña utilidad llamada dos2unix. Para utilizarla tenemos que conectar con la RG350 por SSH para tener acceso a una terminal o utilizar la aplicación de terminal ST-SDL. Desde uno de estos terminales 
+
+RG350:/media/data/local/home # dos2unix fichero_a_convertir.txt
