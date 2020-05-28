@@ -43,11 +43,15 @@ bool InputManager::init(GMenu2X *gmenu2x, Menu *menu) {
 
 	/* If a user-specified input.conf file exists, we load it;
 	 * otherwise, we load the default one. */
-	string input_file = GMENU2X_SYSTEM_DIR "/input.conf";
+	string input_file = gmenu2x->getHome() + "/input.conf";
 	DEBUG("Loading user-specific input.conf file: %s.\n", input_file.c_str());
 	if (!readConfFile(input_file)) {
+		input_file = GMENU2X_SYSTEM_DIR "/input.conf";
+		DEBUG("Loading system input.conf file: %s.\n", input_file.c_str());
+		if (!readConfFile(input_file)) {
 			ERROR("InputManager: failed to open config file\n");
 			return false;
+		}
 		}
 
 	return true;
