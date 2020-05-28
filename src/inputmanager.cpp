@@ -219,6 +219,9 @@ bool InputManager::getButton(Button *button, bool wait) {
 				}
 				startTimer(joystick);
 			}
+		case SDL_JOYBUTTONDOWN:
+			is_js = true;
+			break;
 #endif
 		case SDL_USEREVENT:
 			switch ((enum EventCode) event.user.code) {
