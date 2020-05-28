@@ -1,0 +1,7 @@
+Para modificar tus accesos directos en Gmenu2x debes seleccionarlo y pulsar "Select"
+
+Ahí tienes varias opciones como ver el manual, etc. pero la que nos interesa es Modificar
+
+En esta pantalla puedes cambiar cosas del enlace, como su nombre, su icono, la ubicación de su manual, la velocidad de cpu a la que se lanza (Frecuencia de reloj), la carpeta por defecto del selector en caso de emuladores y su filtro y si muestra o no se muestra en la terminal.
+
+Estos cambios son salvados en ROGUE, no así en el sistema base.

@@ -1,0 +1,10 @@
+Modos de arranque seguro
+
+Durante el arranque se puede modificar la forma de iniciar el sistema pulsando algunas teclas:
+
+Y: Carga el último kernel que funcionó correctamente.
+
+X: Carga el último sistema de archivos (rootfs) que funcionó correctamente.
+
+X+Y: Carga el último sistema (kernel+rootfs) que funcionó correctamente.
+
