@@ -1,0 +1,12 @@
+Špeciálne kombinácie klávesov:
+----
+POWER = Zapnutie alebo vypnutie obrazovky v Gmenu2x.
+POWER + A = Zmena rozlíšenia obrazovky v režime celej obrazovky, keď je v hardwarovom režime.
+POWER + B = Ľavá palica je mapovaná na Dpad.
+POWER + X = Vytvorenie snímky obrazovky. (uložené v snímkach obrazovky).
+POWER + L1 = Deaktivuje alebo reaktivuje analóg / y.
+POWER + R1 = Aktivácia režimu myši (kurzor je kurzor (pravá páčka na RG350 / M), L2 a R2 sú tlačidlá myši).
+POWER + VOL + alebo VOL- = Zmena jasu obrazovky.
+POWER + UP alebo DOWN DPAD = Zmena ostrosti obrazovky
+POWER + SELECT = Zatvorí aktívnu aplikáciu.
+POWER + START = Reštartujte konzolu.

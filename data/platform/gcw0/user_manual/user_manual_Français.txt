@@ -1,0 +1,12 @@
+Combinaisons de touches spéciales:
+----
+POWER = Allume ou éteint l'écran dans Gmenu2x.
+POWER + A = Change la résolution de l'écran en mode plein écran lorsqu'il est en mode Matériel.
+POWER + B = Le stick gauche est mappé sur le Dpad.
+POWER + X = Faites une capture d'écran. (enregistré dans les captures d'écran).
+POWER + L1 = Désactive ou réactive l'analogue / s.
+POWER + R1 = Activer le mode souris (Stick est le curseur (Stick droit sur RG350 / M), L2 & R2 sont les boutons de la souris).
+POWER + VOL + ou VOL- = Modifie la luminosité de l'écran.
+POWER + UP ou DOWN DPAD = Changer la netteté de l'écran
+POWER + SELECT = Fermer l'application active.
+POWER + START = Redémarrez la console.

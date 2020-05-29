@@ -1,0 +1,12 @@
+Specialtangentkombinationer:
+----
+POWER = Slå på eller stäng av skärmen i Gmenu2x.
+POWER + A = Ändrar skärmupplösningen i helskärmsläge när den är i hårdvaruläge.
+POWER + B = Den vänstra pinnen kartläggs på Dpad.
+POWER + X = Ta en skärmdump. (sparas i skärmdumpar).
+POWER + L1 = Deaktiverar eller återaktiverar analogen / analogerna.
+POWER + R1 = Aktivera musläge (Stick är markören (höger pinne på RG350 / M), L2 & R2 är musknapparna).
+POWER + VOL + eller VOL- = Ändrar skärmens ljusstyrka.
+POWER + UP eller DOWN DPAD = Ändra skärmens skärpa
+POWER + SELECT = Stäng den aktiva applikationen.
+POWER + START = Starta om konsolen.

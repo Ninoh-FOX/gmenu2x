@@ -1,0 +1,12 @@
+Specjalne kombinacje klawiszy:
+----
+POWER = Włącz lub wyłącz ekran w Gmenu2x.
+POWER + A = Zmienia rozdzielczość ekranu w trybie pełnoekranowym, gdy jest w trybie sprzętowym.
+POWER + B = Lewy drążek jest odwzorowany na Dpad.
+POWER + X = Zrób zrzut ekranu. (zapisane na zrzutach ekranu).
+POWER + L1 = Dezaktywuje lub reaktywuje analog / s.
+POWER + R1 = Aktywuj tryb myszy (drążek to kursor (prawy drążek na RG350 / M), L2 i R2 to przyciski myszy).
+POWER + VOL + lub VOL- = Zmienia jasność ekranu.
+POWER + UP lub DOWN DPAD = Zmień ostrość ekranu
+POWER + SELECT = Zamknij aktywną aplikację.
+POWER + START = Uruchom ponownie konsolę.

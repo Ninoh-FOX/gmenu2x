@@ -1,0 +1,12 @@
+特殊組合鍵：
+----
+POWER =在Gmenu2x中打開或關閉屏幕。
+POWER + A =處於硬件模式時，以全屏模式更改屏幕分辨率。
+POWER + B =左搖桿映射在Dpad上。
+POWER + X =截屏。 （保存在屏幕截圖中）。
+POWER + L1 =禁用或重新激活模擬/秒。
+POWER + R1 =激活鼠標模式（Stick是光標（RG350 / M上的右搖桿），L2和R2是鼠標按鈕）。
+POWER + VOL +或VOL- =更改屏幕的亮度。
+POWER + UP或DOWN DPAD =更改屏幕的清晰度
+POWER + SELECT =關閉活動的應用程序。
+POWER + START =重新啟動控制台。

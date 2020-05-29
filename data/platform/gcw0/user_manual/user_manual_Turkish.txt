@@ -1,0 +1,12 @@
+Özel tuş kombinasyonları:
+----
+POWER = Gmenu2x'te ekranı açın veya kapatın.
+POWER + A = Donanım modundayken tam ekran modunda ekran çözünürlüğünü değiştirir.
+POWER + B = Sol Çubuk Dpad'de eşlenir.
+POWER + X = Ekran görüntüsü al. (ekran görüntülerine kaydedildi).
+POWER + L1 = Analogları s veya devre dışı bırakır.
+POWER + R1 = Fare modunu etkinleştir (Çubuk imleçtir (RG350 / M'de sağ çubuk), L2 ve R2 fare düğmeleridir).
+POWER + VOL + veya VOL- = Ekranın parlaklığını değiştirir.
+POWER + UP veya DOWN DPAD = Ekranın keskinliğini değiştir
+POWER + SELECT = Etkin uygulamayı kapat.
+POWER + START = Konsolu yeniden başlatın.

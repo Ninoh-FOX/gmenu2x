@@ -1,0 +1,12 @@
+Combinazioni di tasti speciali:
+----
+POWER = Attiva o disattiva lo schermo in Gmenu2x.
+POWER + A = Cambia la risoluzione dello schermo in modalità schermo intero quando è in modalità Hardware.
+POWER + B = La levetta sinistra è mappata sul Dpad.
+POWER + X = Fai uno screenshot. (salvato in schermate).
+POWER + L1 = Disattiva o riattiva l'analogo / i.
+POWER + R1 = Attiva modalità mouse (Stick è il cursore (levetta destra su RG350 / M), L2 e R2 sono i pulsanti del mouse).
+POWER + VOL + o VOL- = Cambia la luminosità dello schermo.
+POWER + UP o DOWN DPAD = Cambia la nitidezza dello schermo
+POWER + SELECT = Chiudi l'applicazione attiva.
+POWER + START = Riavvia la console.
