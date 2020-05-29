@@ -4,6 +4,6 @@
 install-data-local:
 	test -z "$(pkgdatadir)" || $(MKDIR_P) "$(DESTDIR)$(pkgdatadir)"
 	$(MKDIR_P) "$(DESTDIR)$(pkgdatadir)/skins"
-	cp -r translations about.txt "$(DESTDIR)$(pkgdatadir)"
+	cp -r translations docs about.txt "$(DESTDIR)$(pkgdatadir)"
 	cp -r skins/@SCREEN_RES@/* "$(DESTDIR)$(pkgdatadir)/skins"
 	cp -r platform/@PLATFORM@/* "$(DESTDIR)$(pkgdatadir)"
