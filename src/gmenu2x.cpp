@@ -435,7 +435,7 @@ void GMenu2X::docs() {
 		if (confInt["saveSelection"] && (confInt["section"]!=menu->selSectionIndex() || confInt["link"]!=menu->selLinkIndex()))
 			writeConfig();
     string text(readFileAsString(string(fd.getPath()+"/"+fd.getFile()).c_str()));
-    TextDialog td(this, "GMenu2X", tr["RG350 Docs"], "icons/ebook.png", text);
+    TextDialog td(this, "ROGUE Docs", tr["RG350 Docs"], GMENU2X_SYSTEM_DIR "/skins/Default/icons/ebook.png", text);
     td.exec();
 	}
 }
@@ -443,7 +443,7 @@ void GMenu2X::docs() {
 void GMenu2X::about() {
 	string text(readFileAsString(GMENU2X_SYSTEM_DIR "/about.txt"));
 	string build_date("Build date: " __DATE__);
-	TextDialog td(this, "GMenu2X", build_date, "icons/about.png", text);
+	TextDialog td(this, "GMenu2X", build_date, GMENU2X_SYSTEM_DIR "/skins/Default/icons/about.png", text);
 	td.exec();
 }
 
