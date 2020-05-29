@@ -416,7 +416,7 @@ void GMenu2X::initMenu() {
 			menu->addActionLink(i, tr["User Manual"],
 					bind(&GMenu2X::manual, this),
 					tr["Manual of the console"],
-					"skin:icons/rogue.png");
+					GMENU2X_SYSTEM_DIR "/skins/Default/icons/rogue.png");
 		}
 	}
 
@@ -449,7 +449,7 @@ void GMenu2X::about() {
 
 void GMenu2X::manual() {
 	string text(readFileAsString(string(GMENU2X_SYSTEM_DIR "/user_manual/user_manual_"+tr.lang()+".txt").c_str()));
-	TextDialog td(this, "ROGUE manual", tr["User Manual"], GMENU2X_SYSTEM_DIR "/skins/Default/icons/rogue.png", text);
+	TextDialog td(this, "ROGUE CFW", tr["User Manual"], GMENU2X_SYSTEM_DIR "/skins/Default/icons/rogue.png", text);
 	td.exec();
 }
 
