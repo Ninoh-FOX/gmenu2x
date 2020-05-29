@@ -1,0 +1,12 @@
+Speciale toetsencombinaties:
+----
+POWER = Zet het scherm aan of uit in Gmenu2x.
+POWER + A = Verandert de schermresolutie in de modus volledig scherm wanneer deze zich in de hardwaremodus bevindt.
+POWER + B = De linker stick is in kaart gebracht op de Dpad.
+POWER + X = Maak een screenshot. (opgeslagen in screenshots).
+POWER + L1 = Deactiveert of reactiveert de analoog / s.
+POWER + R1 = Activeer muismodus (Stick is de cursor (rechter joystick op RG350 / M), L2 & R2 zijn de muisknoppen).
+POWER + VOL + of VOL- = Verandert de helderheid van het scherm.
+POWER + UP of DOWN DPAD = Verander de scherpte van het scherm
+POWER + SELECT = Sluit de actieve applicatie.
+POWER + START = Start de console opnieuw op.

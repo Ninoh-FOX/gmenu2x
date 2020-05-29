@@ -8,5 +8,5 @@ POWER+L1 = Desactiva o reactiva el/los analogico/s.
 POWER+R1 = Activa el modo ratón (Stick es el cursor (Stick derecho en RG350/M), L2&R2 son los botones del ratón).
 POWER+VOL+ or VOL- = Cambia el brillo de la pantalla.
 POWER+UP or DOWN DPAD = Cambia la nitidez de la pantalla
-POOWER+SELECT = Cierra la aplicación activa.
+POWER+SELECT = Cierra la aplicación activa.
 POWER+START = Reinicia la consola.

@@ -1,0 +1,12 @@
+Erityiset näppäinyhdistelmät:
+----
+POWER = Kytke näyttö päälle tai pois päältä Gmenu2x-sovelluksessa.
+POWER + A = Muuttaa näytön tarkkuutta koko näytön tilassa, kun se on laitteisto-tilassa.
+POWER + B = Vasen sauva on merkitty ohjauspaneeliin.
+POWER + X = Ota kuvakaappaus. (tallennettu kuvakaappauksiin).
+POWER + L1 = Deaktivoi tai aktivoi analogian / uudelleen.
+POWER + R1 = Aktivoi hiiren tila (sauva on kohdistin (oikea sauva mallissa RG350 / M), L2 ja R2 ovat hiiren painikkeet).
+POWER + VOL + tai VOL- = Muuttaa näytön kirkkautta.
+POWER + UP tai DOWN DPAD = Muuta näytön terävyyttä
+POWER + SELECT = Sulje aktiivinen sovellus.
+POWER + START = Käynnistä konsoli uudelleen.

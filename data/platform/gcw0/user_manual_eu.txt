@@ -1,0 +1,12 @@
+Konbinazio gako bereziak:
+----
+POWER = Pantaila piztu edo itzali Gmenu2x-en.
+POWER + A = Pantailaren bereizmena pantaila osoko moduan aldatzen du Hardware moduan dagoenean.
+POWER + B = Ezkerreko makila Dpad-en mapatuta dago.
+POWER + X = Egin pantaila-argazkia. (pantailetan gordeta)
+POWER + L1 = Analogikoa edo desaktibatzen du.
+POWER + R1 = Aktibatu saguaren modua (Makila da kurtsorea (RG350 / M-en eskuineko makila), L2 eta R2 saguaren botoiak dira).
+POWER + VOL + edo VOL- = Pantailaren distira aldatzen du.
+POWER + UP edo DOWN DPAD = Pantailaren zorroztasuna aldatu
+POWER + SELECT = Itxi aplikazio aktiboa.
+POWER + START = Kontsola berrabiarazi.

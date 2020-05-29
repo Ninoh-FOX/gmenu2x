@@ -1,0 +1,12 @@
+Combinacions de tecles especials:
+----
+POWER = Apaga o encén la pantalla en Gmenu2x.
+POWER + A = Canvia la resolució de la pantalla en mode pantalla completa quan aquesta està en mode Hardware.
+POWER + B = El Stick esquerre és mapejat al Dpad.
+POWER + X = Fa una captura de pantalla. (Es guarda en screenshots).
+POWER + L1 = Desactiva o reactiva el / s analògic / s.
+POWER + R1 = Activa el mode ratolí (Stick és el cursor (Estic dret a RG350 / M), L2 & R2 són els botons de l'ratolí).
+POWER + VOL + or tornar = Canvia la brillantor de la pantalla.
+POWER + UP or DOWN DPAD = Canvia la nitidesa de la pantalla
+POWER + SELECT = Tanca l'aplicació activa.
+POWER + START = Reinicia la consola.

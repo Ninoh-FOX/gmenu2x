@@ -1,0 +1,12 @@
+Særlige tastekombinationer:
+----
+POWER = Tænd eller sluk skærmen i Gmenu2x.
+POWER + A = Ændrer skærmopløsningen i fuld skærmtilstand, når den er i hardwaretilstand.
+POWER + B = Den venstre pind er kortlagt på Dpad.
+POWER + X = Tag et skærmbillede. (gemt i skærmbilleder).
+POWER + L1 = Deaktiverer eller genaktiverer analoge / analoger.
+POWER + R1 = Aktivér musetilstand (Stick er markøren (Højre pind på RG350 / M), L2 & R2 er museknapperne).
+POWER + VOL + eller VOL- = Ændrer skærmens lysstyrke.
+POWER + UP eller DOWN DPAD = Skift skærmens skarphed
+POWER + SELECT = Luk det aktive program.
+POWER + START = Genstart konsollen.
