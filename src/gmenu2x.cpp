@@ -448,7 +448,7 @@ void GMenu2X::about() {
 }
 
 void GMenu2X::manual() {
-	string text(readFileAsString(GMENU2X_SYSTEM_DIR "/user_manual.txt"));
+	string text(readFileAsString(string(GMENU2X_SYSTEM_DIR "/user_manual_"+tr.lang()+".txt").c_str()));
 	TextDialog td(this, "GMenu2X", tr["User Manual"], "icons/rogue.png", text);
 	td.exec();
 }
@@ -474,7 +474,7 @@ void GMenu2X::viewLog() {
 void GMenu2X::readConfig() {
 	string conffile = GMENU2X_SYSTEM_DIR "/gmenu2x.conf";
 	readConfig(conffile);
-	
+
 	conffile = getHome() + "/gmenu2x.conf";
 	readConfig(conffile);
 }
@@ -824,7 +824,7 @@ void GMenu2X::skinMenu() {
 	fl_sk.setShowFiles(false);
 	fl_sk.setShowUpdir(false);
 	fl_sk.browse(getHome() + "/skins");
-	fl_sk.browse(GMENU2X_SYSTEM_DIR "/skins", false);	
+	fl_sk.browse(GMENU2X_SYSTEM_DIR "/skins", false);
 
 	string curSkin = confStr["skin"];
 
