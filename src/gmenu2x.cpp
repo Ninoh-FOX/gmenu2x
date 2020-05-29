@@ -448,7 +448,7 @@ void GMenu2X::about() {
 }
 
 void GMenu2X::manual() {
-	string text(readFileAsString(string(GMENU2X_SYSTEM_DIR "/user_manual_"+tr.lang()+".txt").c_str()));
+	string text(readFileAsString(string(GMENU2X_SYSTEM_DIR "/user_manual/user_manual_"+tr.lang()+".txt").c_str()));
 	TextDialog td(this, "GMenu2X", tr["User Manual"], "icons/rogue.png", text);
 	td.exec();
 }
