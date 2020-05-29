@@ -44,7 +44,11 @@ void SurfaceCollection::setSkin(const string &skin) {
  * from its name given as a parameter. */
 string SurfaceCollection::getSkinPath(const string &skin)
 {
-	string path = GMENU2X_SYSTEM_DIR "/skins/" + skin;
+	string path = GMenu2X::getHome() + "/skins/" + skin;
+	if (fileExists(path))
+	  return path;
+
+	path = GMENU2X_SYSTEM_DIR "/skins/" + skin;
 	if (fileExists(path))
 	  return path;
 
@@ -53,13 +57,23 @@ string SurfaceCollection::getSkinPath(const string &skin)
 
 string SurfaceCollection::getSkinFilePath(const string &file, bool useDefault)
 {
-	string path = GMENU2X_SYSTEM_DIR "/skins/" + skin + "/" + file;
+	/* We first search the skin file on the user-specific directory. */
+	string path = GMenu2X::getHome() + "/skins/" + skin + "/" + file;
+	if (fileExists(path))
+	  return path;
+
+	/* If not found, we search that skin file on the system directory. */
+	path = GMENU2X_SYSTEM_DIR "/skins/" + skin + "/" + file;
 	if (fileExists(path))
 	  return path;
 
 	/* If it is nowhere to be found, as a last resort we check the
 	 * "Default" skin for a corresponding (but probably not similar) file. */
 	if (useDefault) {
+		path = GMenu2X::getHome() + "/skins/Default/" + file;
+		if (fileExists(path))
+		  return path;
+
 		path = GMENU2X_SYSTEM_DIR "/skins/Default/" + file;
 		if (fileExists(path))
 		  return path;

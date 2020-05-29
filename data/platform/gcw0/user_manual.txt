@@ -1,0 +1,12 @@
+Special combo keys:
+----
+POWER = Screen on/off in gmenu2x.
+POWER+A = Change the resolution screen to fullscreen in hardware mode.
+POWER+B = switch analog stick to dpad.
+POWER+X = Screenshot capture.
+POWER+L1 = Dis/enable analog/s stick/s
+POWER+R1 = enable mode mouse (stick is cursor (stick right in RG350/M), L2&R2 the mouse buttons)
+POWER+VOL+ or VOL- = change the brightness screen
+POWER+UP or DOWN DPAD = change the sharpness screen
+POOWER+SELECT = kill aplication
+POWER+START = Reboot

@@ -1,0 +1,12 @@
+Combinaciones de teclas especiales:
+----
+POWER = Apaga o enciende la pantalla en Gmenu2x.
+POWER+A = Cambia la resolución de la pantalla en modo pantalla completa cuando esta está en modo Hardware.
+POWER+B = El Stick izquierdo es mapeado en el Dpad.
+POWER+X = Hace una captura de pantalla. (se guarda en screenshots).
+POWER+L1 = Desactiva o reactiva el/los analogico/s.
+POWER+R1 = Activa el modo ratón (Stick es el cursor (Stick derecho en RG350/M), L2&R2 son los botones del ratón).
+POWER+VOL+ or VOL- = Cambia el brillo de la pantalla.
+POWER+UP or DOWN DPAD = Cambia la nitidez de la pantalla
+POOWER+SELECT = Cierra la aplicación activa.
+POWER+START = Reinicia la consola.

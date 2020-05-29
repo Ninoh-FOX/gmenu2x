@@ -46,10 +46,13 @@ bool WallpaperDialog::exec()
 	fl.setShowDirectories(false);
 	fl.setFilter("png");
 
-	fl.browse(GMENU2X_SYSTEM_DIR "/skins/"
+	fl.browse(GMenu2X::getHome() + "/skins/"
 		+ gmenu2x->confStr["skin"] + "/wallpapers", true);
+	fl.browse(GMENU2X_SYSTEM_DIR "/skins/"
+		+ gmenu2x->confStr["skin"] + "/wallpapers", false);
 
 	if (gmenu2x->confStr["skin"] != "Default") {
+		fl.browse(GMenu2X::getHome() + "/skins/Default/wallpapers", false);
 		fl.browse(GMENU2X_SYSTEM_DIR "/skins/Default/wallpapers", false);
 	}
 

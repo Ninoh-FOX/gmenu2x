@@ -45,7 +45,7 @@ class MediaMonitor;
 class Menu;
 
 #ifndef GMENU2X_SYSTEM_DIR
-#define GMENU2X_SYSTEM_DIR "/usr/local/home/.gmenu2x"
+#define GMENU2X_SYSTEM_DIR "/usr/share/gmenu2x"
 #endif
 
 #ifndef LOG_FILE
@@ -180,6 +180,7 @@ public:
 	void skinMenu();
 	void about();
 	void docs();
+	void manual();
 	void viewLog();
 	void changeWallpaper();
 

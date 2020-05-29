@@ -413,6 +413,10 @@ void GMenu2X::initMenu() {
 					bind(&GMenu2X::docs, this),
 					tr["RG350 Docs"],
 					"skin:icons/ebook.png");
+			menu->addActionLink(i, tr["User Manual"],
+					bind(&GMenu2X::manual, this),
+					tr["Manual of the console"],
+					"skin:icons/rogue.png");
 		}
 	}
 
@@ -443,6 +447,12 @@ void GMenu2X::about() {
 	td.exec();
 }
 
+void GMenu2X::manual() {
+	string text(readFileAsString(GMENU2X_SYSTEM_DIR "/user_manual.txt"));
+	TextDialog td(this, "GMenu2X", tr["User Manual"], "icons/rogue.png", text);
+	td.exec();
+}
+
 void GMenu2X::viewLog() {
 	string text(readFileAsString(LOG_FILE));
 
@@ -463,6 +473,9 @@ void GMenu2X::viewLog() {
 
 void GMenu2X::readConfig() {
 	string conffile = GMENU2X_SYSTEM_DIR "/gmenu2x.conf";
+	readConfig(conffile);
+	
+	conffile = getHome() + "/gmenu2x.conf";
 	readConfig(conffile);
 }
 
@@ -731,6 +744,7 @@ void GMenu2X::showSettings() {
 	FileLister fl_tr;
 	fl_tr.setShowDirectories(false);
 	fl_tr.browse(GMENU2X_SYSTEM_DIR "/translations");
+	fl_tr.browse(getHome() + "/translations", false);
 
 	vector<string> translations = fl_tr.getFiles();
 	translations.insert(translations.begin(), "English");
@@ -809,7 +823,8 @@ void GMenu2X::skinMenu() {
 	FileLister fl_sk;
 	fl_sk.setShowFiles(false);
 	fl_sk.setShowUpdir(false);
-	fl_sk.browse(GMENU2X_SYSTEM_DIR "/skins");
+	fl_sk.browse(getHome() + "/skins");
+	fl_sk.browse(GMENU2X_SYSTEM_DIR "/skins", false);	
 
 	string curSkin = confStr["skin"];
 
@@ -876,7 +891,9 @@ void GMenu2X::setSkin(const string &skin, bool setWallpaper) {
 
 	/* Load skin settings from user directory if present,
 	 * or from the system directory. */
-	readSkinConfig(GMENU2X_SYSTEM_DIR "/skins/" + skin + "/skin.conf");
+	if (!readSkinConfig(getHome() + "/skins/" + skin + "/skin.conf")) {
+		readSkinConfig(GMENU2X_SYSTEM_DIR "/skins/" + skin + "/skin.conf");
+		}
 
 	if (setWallpaper && !skinConfStr["wallpaper"].empty()) {
 		string fp = sc.getSkinFilePath("wallpapers/" + skinConfStr["wallpaper"]);
