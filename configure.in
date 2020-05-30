@@ -88,6 +88,8 @@ if test "x$INOTIFY" != xno ; then
 	AC_DEFINE(ENABLE_INOTIFY)
 fi
 
+# esto añade la opción del stick
+
 AC_ARG_ENABLE(stick,
 			  [  --enable-stick=X        specify the stick support],
 			  [GMENU2X_STICK="$enableval"], [GMENU2X_STICK=""])
@@ -111,5 +113,29 @@ AC_DEFINE_UNQUOTED(STICK, "${STICK}")
 if test "x$STICK" != xno ; then
 	AC_DEFINE(SDL_STICK_ENABLED)
 fi
+
+# esto añade la opción del tipo de batería por consola
+
+AC_ARG_ENABLE(battery,
+			  [  --enable-battery=X        specify the console model for the battery],
+			  [GMENU2X_BATTERY="$enableval"], [GMENU2X_BATTERY=""])
+
+case "$GMENU2X_BATTERY" in
+	rg350)
+		BATTERY="rg350"
+		AC_DEFINE(BATTERY_RG350)
+	;;
+	pg2)
+		BATTERY="pg2"
+		AC_DEFINE(BATTERY_PG2)
+	;;
+	*)
+		AC_MSG_ERROR([*** Unknown option. Please put BR2_PACKAGE_GMENU2X_BATTERY "rg350" or "pg2" in you platform defconfig])
+	;;
+esac
+
+AC_SUBST(BATTERY)
+AC_DEFINE_UNQUOTED(BATTERY, "${BATTERY}")
+
 
 AC_OUTPUT(Makefile src/Makefile data/Makefile)

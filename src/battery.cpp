@@ -22,13 +22,24 @@ unsigned short getBatteryLevel()
     batteryHandle = fopen("/sys/class/power_supply/battery/voltage_now", "r");
 #endif
 	if (batteryHandle) {
-	#define MAX_VOLTAGE 4230000
+	#ifdef BATTERY_RG350
+	/* voltaje maximo de la RG es 4320000 */
+	#define MAX_VOLTAGE 4250000
 	#define MIN_VOLTAGE 3330000
+	/* voltaje maximo de la RG es 4385000 con el cable USB */
+	#define USB_VOLTAGE 65000
+	#elif BATTERY_PG2
+	/* voltaje maximo de la PG es 4270000 */
+	#define MAX_VOLTAGE 4200000
+	#define MIN_VOLTAGE 3330000
+	/* voltaje maximo de la PG es 4321000 con el cable USB*/
+	#define USB_VOLTAGE 51000
+	#endif
 
         int battval = 0;
         fscanf(batteryHandle, "%d", &battval);
 		if (isBatteryCharging()) {
-		battval=((battval-MIN_VOLTAGE)-50000)/((MAX_VOLTAGE-MIN_VOLTAGE)/100);
+		battval=((battval-MIN_VOLTAGE)-USB_VOLTAGE)/((MAX_VOLTAGE-MIN_VOLTAGE)/100);
 		}else{
 		battval=(battval-MIN_VOLTAGE)/((MAX_VOLTAGE-MIN_VOLTAGE)/100);
 		}
