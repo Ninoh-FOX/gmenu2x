@@ -19,19 +19,25 @@ static unsigned short getBatteryLevel()
 	FILE *batteryHandle = NULL;
 
 #if defined(PLATFORM_A320) || defined(PLATFORM_GCW0) || defined(PLATFORM_NANONOTE)
-	batteryHandle = fopen("/sys/class/power_supply/battery/capacity", "r");
+    batteryHandle = fopen("/sys/class/power_supply/battery/voltage_now", "r");
 #endif
 	if (batteryHandle) {
-		int battval = 0;
-		fscanf(batteryHandle, "%d", &battval);
-		fclose(batteryHandle);
+	#define MAX_VOLTAGE 4400000
+	#define MIN_VOLTAGE 3300000
 
+        int battval = 0;
+        fscanf(batteryHandle, "%d", &battval);
+		battval=(battval-MIN_VOLTAGE)/((MAX_VOLTAGE-MIN_VOLTAGE)/100);
+        fclose(batteryHandle);
+		
 		if(battval>100)
-      battval=100;
+		battval=100;
+		else if(battval<0)
+		battval=0;
 		return battval;
-	}
+    }
 
-	return 0;
+    return 0;
 }
 
 static unsigned short isBatteryCharging()
