@@ -73,7 +73,7 @@ Menu::Menu(GMenu2X *gmenu2x, Touchscreen &ts)
 	, btnContextMenu(gmenu2x, ts, "skin:imgs/menu.png", "",
 			std::bind(&GMenu2X::showContextMenu, gmenu2x))
 {
-	//readSections(GMENU2X_SYSTEM_DIR "/sections");
+	readSections(GMENU2X_SYSTEM_DIR "/sections");
 	readSections(GMenu2X::getHome() + "/sections");
 
 	sort(sections.begin(),sections.end(),case_less());
@@ -824,7 +824,7 @@ void Menu::readLinks()
 		int correct = (i>sections.size() ? iSection : i);
 		string const& section = sections[correct];
 
-		//readLinksOfSection(GMENU2X_SYSTEM_DIR "/sections/" + section, i);
+		readLinksOfSection(GMENU2X_SYSTEM_DIR "/sections/" + section, i);
 		readLinksOfSection(GMenu2X::getHome() + "/sections/" + section, i);
 	}
 
