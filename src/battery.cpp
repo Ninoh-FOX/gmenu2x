@@ -14,7 +14,7 @@
  * 5 means fully charged, 6 represents running on external power.
  */
 // la función de lectura de batería se divide en 2, una para ver carga y otra para ver si está conectada por usb
-static unsigned short getBatteryLevel()
+unsigned short getBatteryLevel()
 {
 	FILE *batteryHandle = NULL;
 
@@ -22,13 +22,18 @@ static unsigned short getBatteryLevel()
     batteryHandle = fopen("/sys/class/power_supply/battery/voltage_now", "r");
 #endif
 	if (batteryHandle) {
-	#define MAX_VOLTAGE 4400000
-	#define MIN_VOLTAGE 3300000
+	#define MAX_VOLTAGE 4230000
+	#define MIN_VOLTAGE 3330000
 
         int battval = 0;
         fscanf(batteryHandle, "%d", &battval);
+		if (isBatteryCharging()) {
+		battval=((battval-MIN_VOLTAGE)-50000)/((MAX_VOLTAGE-MIN_VOLTAGE)/100);
+		}else{
 		battval=(battval-MIN_VOLTAGE)/((MAX_VOLTAGE-MIN_VOLTAGE)/100);
-        fclose(batteryHandle);
+		}
+		fclose(batteryHandle);
+			
 		
 		if(battval>100)
 		battval=100;
@@ -40,7 +45,7 @@ static unsigned short getBatteryLevel()
     return 0;
 }
 
-static unsigned short isBatteryCharging()
+unsigned short isBatteryCharging()
 {
 	FILE *usbHandle = NULL;
 

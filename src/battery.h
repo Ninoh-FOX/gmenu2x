@@ -5,6 +5,8 @@
 
 class OffscreenSurface;
 class SurfaceCollection;
+unsigned short getBatteryLevel();
+unsigned short isBatteryCharging();
 
 
 /**
