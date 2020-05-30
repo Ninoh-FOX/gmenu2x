@@ -39,9 +39,9 @@ unsigned short getBatteryLevel()
         int battval = 0;
         fscanf(batteryHandle, "%d", &battval);
 		if (isBatteryCharging()) {
-		battval=((battval-MIN_VOLTAGE)-USB_VOLTAGE)/((MAX_VOLTAGE-MIN_VOLTAGE)/100);
+		battval=((battval - MIN_VOLTAGE) - USB_VOLTAGE) * 100 / (MAX_VOLTAGE - MIN_VOLTAGE);
 		}else{
-		battval=(battval-MIN_VOLTAGE)/((MAX_VOLTAGE-MIN_VOLTAGE)/100);
+		battval=(battval - MIN_VOLTAGE) * 100 / (MAX_VOLTAGE - MIN_VOLTAGE);
 		}
 		fclose(batteryHandle);
 			
