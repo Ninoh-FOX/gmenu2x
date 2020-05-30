@@ -68,13 +68,41 @@ bool Link::handleTS() {
 	return false;
 }
 
+void Link::paintDouble() {
+	Surface& s = *gmenu2x->s;
+
+	int middle=getTitle().size()/2;
+	int splitpoint=-1;
+	for(int f=0; f<middle-1; f++) {
+    if(getTitle()[middle-f]==' ') {
+      splitpoint=middle-f;
+      break;
+    }
+    if(getTitle()[middle+f]==' ') {
+      splitpoint=middle+f;
+      break;
+    }
+	}
+
+	#define ADJUSTED_LINE_HEIGHT  0.65    // 1=lineSpacing (gmenu text height, greater than text height)
+  if(splitpoint!=-1) {
+    gmenu2x->font->write(s, getTitle().substr(0,splitpoint), iconX+16, rect.y + gmenu2x->skinConfInt["linkHeight"]-padding-(gmenu2x->font->getLineSpacing()*ADJUSTED_LINE_HEIGHT), Font::HAlignCenter, Font::VAlignBottom);
+    gmenu2x->font->write(s, getTitle().substr(splitpoint+1), iconX+16, rect.y + gmenu2x->skinConfInt["linkHeight"]-padding, Font::HAlignCenter, Font::VAlignBottom);
+  }
+  else
+    gmenu2x->font->write(s, getTitle(), iconX+16, rect.y + gmenu2x->skinConfInt["linkHeight"]-padding, Font::HAlignCenter, Font::VAlignBottom);
+}
+
 void Link::paint() {
 	Surface& s = *gmenu2x->s;
 
 	if (iconSurface) {
 		iconSurface->blit(s, iconX, rect.y+padding, 32,32);
 	}
-	gmenu2x->font->write(s, getTitle(), iconX+16, rect.y + gmenu2x->skinConfInt["linkHeight"]-padding, Font::HAlignCenter, Font::VAlignBottom);
+  if (gmenu2x->font->getTextWidth(getTitle())>gmenu2x->skinConfInt["linkWidth"])
+    paintDouble();
+  else
+    gmenu2x->font->write(s, getTitle(), iconX+16, rect.y + gmenu2x->skinConfInt["linkHeight"]-padding, Font::HAlignCenter, Font::VAlignBottom);
 }
 
 void Link::paintHover() {

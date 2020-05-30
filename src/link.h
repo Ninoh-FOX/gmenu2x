@@ -46,6 +46,7 @@ public:
 	bool isPressed();
 	bool handleTS();
 
+	void paintDouble();
 	virtual void paint();
 	void paintHover();
 
