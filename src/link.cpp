@@ -84,7 +84,7 @@ void Link::paintDouble() {
     }
 	}
 
-	#define ADJUSTED_LINE_HEIGHT  0.65    // 1=lineSpacing (gmenu text height, greater than text height)
+	#define ADJUSTED_LINE_HEIGHT  0.9    // 1=lineSpacing (gmenu text height, greater than text height)
   if(splitpoint!=-1) {
     gmenu2x->font->write(s, getTitle().substr(0,splitpoint), iconX+16, rect.y + gmenu2x->skinConfInt["linkHeight"]-padding-(gmenu2x->font->getLineSpacing()*ADJUSTED_LINE_HEIGHT), Font::HAlignCenter, Font::VAlignBottom);
     gmenu2x->font->write(s, getTitle().substr(splitpoint+1), iconX+16, rect.y + gmenu2x->skinConfInt["linkHeight"]-padding, Font::HAlignCenter, Font::VAlignBottom);
