@@ -333,3 +333,6 @@ Clock frequency=クロック周波数
 Display Console=ディスプレイコンソール
 Selector filter (Separate values with a comma)=セレクターフィルター（値をコンマで区切る）
 OK=オーケー
+Select a manual or README file=マニュアルまたはREADMEファイルを選択します
+CPU clock frequency for this link=このリンクのCPUクロック周波数
+Must be enabled for console-based applications=コンソールベースのアプリケーションでは有効にする必要があります
