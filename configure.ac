@@ -1,4 +1,4 @@
-AC_INIT(configure.in)
+AC_INIT(configure.ac)
 AM_INIT_AUTOMAKE(gmenu2x, ROGUE)
 
 AC_ISC_POSIX
