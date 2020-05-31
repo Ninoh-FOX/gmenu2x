@@ -45,7 +45,7 @@ unsigned short getBatteryLevel()
       #define MAX_VOLTAGE 4200000
       #define MIN_VOLTAGE 3330000
       /* voltaje maximo de la PG es 4321000 con el cable USB*/
-      #define USB_VOLTAGE 121000
+      #define USB_VOLTAGE 110000
       #endif
 
       fscanf(batteryHandle, "%d", &battval);
