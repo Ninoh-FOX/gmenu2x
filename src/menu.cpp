@@ -94,6 +94,10 @@ Menu::Menu(GMenu2X *gmenu2x, Touchscreen &ts)
 
 				openPackagesFromDir((string) CARD_ROOT + "/" +
 							dptr->d_name + "/apps");
+				openPackagesFromDir((string) CARD_ROOT + "/" +
+							dptr->d_name + "/APPS");
+				openPackagesFromDir((string) CARD_ROOT + "/" +
+							dptr->d_name + "/Apps");
 			}
 			closedir(dirp);
 		}
