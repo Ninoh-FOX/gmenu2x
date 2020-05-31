@@ -92,6 +92,16 @@ bool fileExists(const string &file) {
 	return access(file.c_str(), F_OK) == 0;
 }
 
+bool dirExists(const string &folder) {
+  DIR *dir=opendir(folder.c_str());
+  if(dir) {
+    closedir(dir);
+    return true;
+  } else {
+    return false;
+  }
+}
+
 bool rmtree(string path) {
 	DIR *dirp;
 	struct stat st;

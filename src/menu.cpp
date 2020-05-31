@@ -92,11 +92,15 @@ Menu::Menu(GMenu2X *gmenu2x, Touchscreen &ts)
 				if (!strcmp(dptr->d_name, ".") || !strcmp(dptr->d_name, ".."))
 					continue;
 
-				openPackagesFromDir((string) CARD_ROOT + "/" +
+        // asegurarse de que existe la carpeta de aplicaciones
+        if(dirExists((string) CARD_ROOT + "/" + dptr->d_name + "/apps"))
+          openPackagesFromDir((string) CARD_ROOT + "/" +
 							dptr->d_name + "/apps");
-				openPackagesFromDir((string) CARD_ROOT + "/" +
+        else if((dirExists((string) CARD_ROOT + "/" + dptr->d_name + "/APPS")))
+          openPackagesFromDir((string) CARD_ROOT + "/" +
 							dptr->d_name + "/APPS");
-				openPackagesFromDir((string) CARD_ROOT + "/" +
+        else if((dirExists((string) CARD_ROOT + "/" + dptr->d_name + "/Apps")))
+          openPackagesFromDir((string) CARD_ROOT + "/" +
 							dptr->d_name + "/Apps");
 			}
 			closedir(dirp);
