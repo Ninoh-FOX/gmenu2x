@@ -129,6 +129,10 @@ case "$GMENU2X_BATTERY" in
 		BATTERY="pg2"
 		AC_DEFINE(BATTERY_PG2)
 	;;
+	pg2v2)
+	BATTERY="pg2v2"
+	AC_DEFINE(BATTERY_PG2V2)
+	;;
 	*)
 		AC_MSG_ERROR([*** Unknown option. Please put BR2_PACKAGE_GMENU2X_BATTERY "rg350" or "pg2" in you platform defconfig])
 	;;
