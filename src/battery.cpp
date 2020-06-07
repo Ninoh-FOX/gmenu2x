@@ -40,20 +40,20 @@ unsigned short getBatteryLevel()
 		#define MIN_VOLTAGE 3300000
 		/* voltaje maximo de la RG es 4385000 con el cable USB */
 		#define USB_VOLTAGE 65000
+		#endif
 		#ifdef BATTERY_PG2
 		/* voltaje maximo de la PG2 es 4220000 */
 		#define MAX_VOLTAGE 4150000
 		#define MIN_VOLTAGE 3330000
 		/* voltaje maximo de la PG2 es 4300000 con el cable USB*/
 		#define USB_VOLTAGE 80000
+		#endif
 		#ifdef BATTERY_PG2V2
 		/* voltaje maximo de la PG2V2 es 4270000 */
 		#define MAX_VOLTAGE 4150000
 		#define MIN_VOLTAGE 3330000
 		/* voltaje maximo de la PG2v2 es 4321000 con el cable USB*/
 		#define USB_VOLTAGE 110000
-		#endif
-		#endif
 		#endif
 
       fscanf(batteryHandle, "%d", &battval);
