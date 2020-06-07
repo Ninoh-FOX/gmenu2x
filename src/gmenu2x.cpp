@@ -813,6 +813,8 @@ void GMenu2X::showSettings() {
 		if (lang != tr.lang()) {
 			tr.setLang(lang);
 			confStr["lang"] = lang;
+			writeConfig();
+			exit(0);
 		}
 
 		writeConfig();
