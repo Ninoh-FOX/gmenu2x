@@ -228,40 +228,44 @@ bool InputManager::getButton(Button *button, bool wait) {
 			break;
 #ifdef SDL_STICK_ENABLED
 		case SDL_JOYAXISMOTION: {
-				is_js = true;
+        if(gmenu2x->confInt["enableStick"]) {
+          is_js = true;
 
-				unsigned int axis = event.jaxis.axis;
-				/* We only handle the first joystick */
-				if (axis > 1)
-					return false;
+          unsigned int axis = event.jaxis.axis;
+          /* We only handle the first joystick */
+          if (axis > 1)
+            return false;
 
-				Joystick *joystick = &joysticks[event.jaxis.which];
-				bool *axisState = joystick->axisState[axis];
+          Joystick *joystick = &joysticks[event.jaxis.which];
+          bool *axisState = joystick->axisState[axis];
 
-				if (event.jaxis.value < -20000) {
-					if (axisState[AXIS_STATE_NEGATIVE])
-						return false;
-					axisState[AXIS_STATE_NEGATIVE] = true;
-					axisState[AXIS_STATE_POSITIVE] = false;
-					*button = axis ? UP : LEFT;
-				} else if (event.jaxis.value > 20000) {
-					if (axisState[AXIS_STATE_POSITIVE])
-						return false;
-					axisState[AXIS_STATE_NEGATIVE] = false;
-					axisState[AXIS_STATE_POSITIVE] = true;
-					*button = axis ? DOWN : RIGHT;
-				} else {
-					bool *otherAxisState = joystick->axisState[!axis];
-					if (!otherAxisState[AXIS_STATE_NEGATIVE] &&
-								!otherAxisState[AXIS_STATE_POSITIVE] && (
-									axisState[AXIS_STATE_NEGATIVE] ||
-									axisState[AXIS_STATE_POSITIVE]))
-						stopTimer(joystick);
+          if (event.jaxis.value < -20000) {
+            if (axisState[AXIS_STATE_NEGATIVE])
+              return false;
+            axisState[AXIS_STATE_NEGATIVE] = true;
+            axisState[AXIS_STATE_POSITIVE] = false;
+            *button = axis ? UP : LEFT;
+          } else if (event.jaxis.value > 20000) {
+            if (axisState[AXIS_STATE_POSITIVE])
+              return false;
+            axisState[AXIS_STATE_NEGATIVE] = false;
+            axisState[AXIS_STATE_POSITIVE] = true;
+            *button = axis ? DOWN : RIGHT;
+          } else {
+            bool *otherAxisState = joystick->axisState[!axis];
+            if (!otherAxisState[AXIS_STATE_NEGATIVE] &&
+                  !otherAxisState[AXIS_STATE_POSITIVE] && (
+                    axisState[AXIS_STATE_NEGATIVE] ||
+                    axisState[AXIS_STATE_POSITIVE]))
+              stopTimer(joystick);
 
-					axisState[0] = axisState[1] = false;
-					return false;
-				}
-				startTimer(joystick);
+            axisState[0] = axisState[1] = false;
+            return false;
+          }
+          startTimer(joystick);
+        } else {
+          return false;
+        }
 				break;
 			}
 #endif

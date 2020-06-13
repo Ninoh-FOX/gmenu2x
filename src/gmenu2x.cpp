@@ -518,6 +518,7 @@ void GMenu2X::readConfig(string conffile) {
 	evalIntConf( confInt, "previewType", 1, 1, 2);
 	evalIntConf( confInt, "opacity", 128, 0, 255);
 	evalIntConf( confInt, "brightness", readBrightConfig(), 10, 200);
+	evalIntConf( confInt, "enableStick", 1, 0,1 );
 
 	if (confStr["tvoutEncoding"] != "PAL") confStr["tvoutEncoding"] = "NTSC";
 	resX = constrain( confInt["resolutionX"], 320,1920 );
@@ -799,6 +800,10 @@ void GMenu2X::showSettings() {
 			this, ts, tr["Brightness"],
 			tr["Screen brightness"],
 			&confInt["brightness"], 10, 200, 10)));
+	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingBool(
+			this, ts, tr["Stick enabled"],
+			tr["Enable analogic stick in menus"],
+			&confInt["enableStick"])));
 
 	if (sd.exec()) {
 #ifdef ENABLE_CPUFREQ
