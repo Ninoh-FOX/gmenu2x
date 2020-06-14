@@ -37,7 +37,7 @@ unsigned short getBatteryLevel()
 		#ifdef BATTERY_RG350
 		/* voltaje maximo de la RG es 4320000 */
 		#define MAX_VOLTAGE 4200000
-		#define MIN_VOLTAGE 3330000
+		#define MIN_VOLTAGE 3310000
 		/* voltaje maximo de la RG es 4385000 con el cable USB */
 		#define USB_VOLTAGE 65000
 		#endif
