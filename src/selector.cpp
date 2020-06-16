@@ -124,7 +124,7 @@ int Selector::exec(int startSelection) {
             #define PREVIEW_RATIO   0.45      // preview scale, 1=240 height
             int h=240*PREVIEW_RATIO;
             int w=h * screenshot->width() / screenshot->height();
-            screenshot->blitScaled(s, 315-w, 0, w, h, opac);          // thumbnail preview
+            screenshot->blitScaled(s, 311-w, gmenu2x->skinConfInt["topBarHeight"]+2, w, h, opac);          // thumbnail preview
 					}
 				}
 			}
