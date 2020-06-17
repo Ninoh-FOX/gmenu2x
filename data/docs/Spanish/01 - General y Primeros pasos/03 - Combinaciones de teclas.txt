@@ -12,6 +12,9 @@ Power + Volumen+/Volumen-
 Fuerza el escalado de la pantalla
 Power + A
 
+Cambia entre modo suavizado o pixelado
+Power + Cruceta Arriba / Abajo
+
 Pantallazo (se guarda en /media/data/local/home/screenshots)
 Power + X
 
@@ -22,4 +25,4 @@ Fuerza la salida al frontend (normalmente GMenu2X)
 Power + Select
 
 Reset 
-Power + Start or Reset button
+Power + Start o botón de Reset
