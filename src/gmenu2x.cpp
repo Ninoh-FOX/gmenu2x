@@ -517,7 +517,7 @@ void GMenu2X::readConfig(string conffile) {
 	evalIntConf( confInt, "videoBpp", 32, 16, 32 );
 	evalIntConf( confInt, "previewType", 1, 1, 2);
 	evalIntConf( confInt, "opacity", 128, 0, 255);
-	evalIntConf( confInt, "brightness", readBrightConfig(), 10, 200);
+	evalIntConf( confInt, "brightness", readBrightConfig(), 10, 255);
 #ifdef SDL_STICK_ENABLED
 	evalIntConf( confInt, "enableStick", 1, 0,1 );
 #endif
@@ -801,7 +801,7 @@ void GMenu2X::showSettings() {
 	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingInt(
 			this, ts, tr["Brightness"],
 			tr["Screen brightness"],
-			&confInt["brightness"], 10, 200, 10)));
+			&confInt["brightness"], 10, 255, 10)));
 #ifdef SDL_STICK_ENABLED
 	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingBool(
 			this, ts, tr["Stick enabled"],
