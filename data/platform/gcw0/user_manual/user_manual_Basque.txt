@@ -6,6 +6,7 @@ POWER + B = Ezkerreko makila Dpad-en mapatuta dago.
 POWER + X = Egin pantaila-argazkia. (pantailetan gordeta)
 POWER + L1 = Analogikoa edo desaktibatzen du.
 POWER + R1 = Aktibatu saguaren modua (Makila da kurtsorea (RG350 / M-en eskuineko makila), L2 eta R2 saguaren botoiak dira).
+Oharra: RG280V POWER + L1 = Aktibatu saguaren modua (Dpad kurtsorea da, A&B saguaren botoiak).
 POWER + VOL + edo VOL- = Pantailaren distira aldatzen du.
 POWER + UP edo DOWN DPAD = Pantailaren zorroztasuna aldatu
 POWER + SELECT = Itxi aplikazio aktiboa.
