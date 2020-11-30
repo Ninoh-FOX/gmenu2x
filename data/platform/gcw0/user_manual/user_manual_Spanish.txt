@@ -6,6 +6,7 @@ POWER+B = El Stick izquierdo es mapeado en el Dpad.
 POWER+X = Hace una captura de pantalla. (se guarda en screenshots).
 POWER+L1 = Desactiva o reactiva el/los analogico/s.
 POWER+R1 = Activa el modo ratón (Stick es el cursor (Stick derecho en RG350/M), L2&R2 son los botones del ratón).
+nota: RG280V POWER+L1 = Activa el modo ratón (Dpad es el cursor), A&B son los botones del ratón). 
 POWER+VOL+ or VOL- = Cambia el brillo de la pantalla.
 POWER+UP or DOWN DPAD = Cambia la nitidez de la pantalla
 POWER+SELECT = Cierra la aplicación activa.
