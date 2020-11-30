@@ -6,6 +6,7 @@ POWER + B = 왼쪽 스틱이 Dpad에 매핑됩니다.
 POWER + X = 스크린 샷을 찍습니다. (스크린 샷으로 저장).
 POWER + L1 = 아날로그를 비활성화하거나 재 활성화합니다.
 POWER + R1 = 마우스 모드 활성화 (스틱은 커서 (RG350 / M의 오른쪽 스틱), L2 & R2는 마우스 버튼)
+참고 : RG280V POWER + L1 = 마우스 모드 활성화 (Dpad는 커서, A & B는 마우스 버튼).
 POWER + VOL + 또는 VOL- = 화면의 밝기를 변경합니다.
 POWER + UP 또는 DOWN DPAD = 화면 선명도 변경
 POWER + SELECT = 활성 응용 프로그램을 닫습니다.
