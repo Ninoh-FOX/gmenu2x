@@ -6,6 +6,7 @@ POWER + B = Den vänstra pinnen kartläggs på Dpad.
 POWER + X = Ta en skärmdump. (sparas i skärmdumpar).
 POWER + L1 = Deaktiverar eller återaktiverar analogen / analogerna.
 POWER + R1 = Aktivera musläge (Stick är markören (höger pinne på RG350 / M), L2 & R2 är musknapparna).
+OBS: RG280V POWER + L1 = Aktivera musläget (Dpad är markören, A&B är musknapparna).
 POWER + VOL + eller VOL- = Ändrar skärmens ljusstyrka.
 POWER + UP eller DOWN DPAD = Ändra skärmens skärpa
 POWER + SELECT = Stäng den aktiva applikationen.
