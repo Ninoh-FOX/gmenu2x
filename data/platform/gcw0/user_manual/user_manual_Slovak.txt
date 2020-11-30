@@ -6,6 +6,7 @@ POWER + B = Ľavá palica je mapovaná na Dpad.
 POWER + X = Vytvorenie snímky obrazovky. (uložené v snímkach obrazovky).
 POWER + L1 = Deaktivuje alebo reaktivuje analóg / y.
 POWER + R1 = Aktivácia režimu myši (kurzor je kurzor (pravá páčka na RG350 / M), L2 a R2 sú tlačidlá myši).
+poznámka: RG280V POWER + L1 = Aktivovať režim myši (Dpad je kurzor, A&B sú tlačidlá myši).
 POWER + VOL + alebo VOL- = Zmena jasu obrazovky.
 POWER + UP alebo DOWN DPAD = Zmena ostrosti obrazovky
 POWER + SELECT = Zatvorí aktívnu aplikáciu.
