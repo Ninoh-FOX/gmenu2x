@@ -6,6 +6,7 @@ POWER + B = Le stick gauche est mappé sur le Dpad.
 POWER + X = Faites une capture d'écran. (enregistré dans les captures d'écran).
 POWER + L1 = Désactive ou réactive l'analogue / s.
 POWER + R1 = Activer le mode souris (Stick est le curseur (Stick droit sur RG350 / M), L2 & R2 sont les boutons de la souris).
+Remarque: RG280V POWER + L1 = Activer le mode souris (Dpad est le curseur, A&B est les boutons de la souris).
 POWER + VOL + ou VOL- = Modifie la luminosité de l'écran.
 POWER + UP ou DOWN DPAD = Changer la netteté de l'écran
 POWER + SELECT = Fermer l'application active.
