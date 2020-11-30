@@ -6,6 +6,7 @@ POWER + B =左摇杆映射在Dpad上。
 POWER + X =截屏。 （保存在屏幕截图中）。
 POWER + L1 =禁用或重新激活模拟/秒。
 POWER + R1 =激活鼠标模式（Stick是光标（RG350 / M上的右摇杆），L2和R2是鼠标按钮）。
+注意：RG280V POWER + L1 =激活鼠标模式（Dpad是光标，A＆B是鼠标按钮）。
 POWER + VOL +或VOL- =更改屏幕的亮度。
 POWER + UP或DOWN DPAD =更改屏幕的清晰度
 POWER + SELECT =关闭活动的应用程序。
