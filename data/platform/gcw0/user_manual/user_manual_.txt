@@ -6,6 +6,7 @@ POWER + B = The left Stick is mapped on the Dpad.
 POWER + X = Take a screenshot. (saved in screenshots).
 POWER + L1 = Deactivates or reactivates the analogue / s.
 POWER + R1 = Activate mouse mode (Stick is the cursor (Right stick on RG350 / M), L2 & R2 are the mouse buttons).
+note: RG280V POWER + L1 = Activate mouse mode (Dpad is the cursor, A&B is the mouse buttons).
 POWER + VOL + or VOL- = Changes the brightness of the screen.
 POWER + UP or DOWN DPAD = Change the sharpness of the screen
 POWER + SELECT = Close the active application.
