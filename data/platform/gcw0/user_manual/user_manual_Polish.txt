@@ -6,6 +6,7 @@ POWER + B = Lewy drążek jest odwzorowany na Dpad.
 POWER + X = Zrób zrzut ekranu. (zapisane na zrzutach ekranu).
 POWER + L1 = Dezaktywuje lub reaktywuje analog / s.
 POWER + R1 = Aktywuj tryb myszy (drążek to kursor (prawy drążek na RG350 / M), L2 i R2 to przyciski myszy).
+note: RG280V POWER + L1 = Aktivér musetilstand (Dpad er markøren, A&B er museknapperne).
 POWER + VOL + lub VOL- = Zmienia jasność ekranu.
 POWER + UP lub DOWN DPAD = Zmień ostrość ekranu
 POWER + SELECT = Zamknij aktywną aplikację.
