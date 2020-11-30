@@ -6,6 +6,7 @@ POWER + B = Der linke Stick ist auf dem Dpad abgebildet.
 POWER + X = Machen Sie einen Screenshot. (in Screenshots gespeichert).
 POWER + L1 = Deaktiviert oder reaktiviert das / die Analog (en).
 POWER + R1 = Mausmodus aktivieren (Stick ist der Cursor (rechter Stick auf RG350 / M), L2 & R2 sind die Maustasten).
+Hinweis: RG280V POWER + L1 = Mausmodus aktivieren (Dpad ist der Cursor, A & B sind die Maustasten).
 POWER + VOL + oder VOL- = Ändert die Helligkeit des Bildschirms.
 POWER + UP oder DOWN DPAD = Ändern Sie die Schärfe des Bildschirms
 POWER + SELECT = Schließen Sie die aktive Anwendung.
