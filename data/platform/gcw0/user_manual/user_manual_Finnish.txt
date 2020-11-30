@@ -6,6 +6,7 @@ POWER + B = Vasen sauva on merkitty ohjauspaneeliin.
 POWER + X = Ota kuvakaappaus. (tallennettu kuvakaappauksiin).
 POWER + L1 = Deaktivoi tai aktivoi analogian / uudelleen.
 POWER + R1 = Aktivoi hiiren tila (sauva on kohdistin (oikea sauva mallissa RG350 / M), L2 ja R2 ovat hiiren painikkeet).
+Huomaa: RG280V POWER + L1 = Aktivoi hiirtila (Dpad on kohdistin, A&B on hiiren painikkeet).
 POWER + VOL + tai VOL- = Muuttaa näytön kirkkautta.
 POWER + UP tai DOWN DPAD = Muuta näytön terävyyttä
 POWER + SELECT = Sulje aktiivinen sovellus.
