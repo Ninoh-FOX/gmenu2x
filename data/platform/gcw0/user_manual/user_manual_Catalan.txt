@@ -6,6 +6,7 @@ POWER + B = El Stick esquerre és mapejat al Dpad.
 POWER + X = Fa una captura de pantalla. (Es guarda en screenshots).
 POWER + L1 = Desactiva o reactiva el / s analògic / s.
 POWER + R1 = Activa el mode ratolí (Stick és el cursor (Estic dret a RG350 / M), L2 & R2 són els botons de l'ratolí).
+nota: RG280V POWER + L1 = Activa el mode ratolí (Dpad és el cursor), A & B són els botons de l'ratolí).
 POWER + VOL + or tornar = Canvia la brillantor de la pantalla.
 POWER + UP or DOWN DPAD = Canvia la nitidesa de la pantalla
 POWER + SELECT = Tanca l'aplicació activa.
