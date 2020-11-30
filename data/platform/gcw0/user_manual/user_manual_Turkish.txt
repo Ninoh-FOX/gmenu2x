@@ -6,6 +6,7 @@ POWER + B = Sol Çubuk Dpad'de eşlenir.
 POWER + X = Ekran görüntüsü al. (ekran görüntülerine kaydedildi).
 POWER + L1 = Analogları s veya devre dışı bırakır.
 POWER + R1 = Fare modunu etkinleştir (Çubuk imleçtir (RG350 / M'de sağ çubuk), L2 ve R2 fare düğmeleridir).
+not: RG280V POWER + L1 = Fare modunu etkinleştir (Dpad imleç, A&B fare düğmeleridir).
 POWER + VOL + veya VOL- = Ekranın parlaklığını değiştirir.
 POWER + UP veya DOWN DPAD = Ekranın keskinliğini değiştir
 POWER + SELECT = Etkin uygulamayı kapat.
