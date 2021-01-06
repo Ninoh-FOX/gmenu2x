@@ -72,6 +72,13 @@ void MenuSettingInt::draw(int valueX, int y, int h)
     if(value()!=bright)
       setValue(bright);
   }
+	
+	if(name==gmenu2x->tr["sharpness"]) {
+    int sharpness=gmenu2x->readsharpness();
+    if(value()!=sharpness)
+      setValue(sharpness);
+  }
+	
 	Surface& s = *gmenu2x->s;
 	MenuSetting::draw(valueX, y, h);
 	gmenu2x->font->write(s, strvalue, valueX, y, Font::HAlignLeft, Font::VAlignTop);
@@ -99,10 +106,39 @@ bool MenuSettingInt::handleButtonPress(InputManager::Button button)
 		default:
 			return false;
 	}
+	
+	// sharpness is changed in real time
+	
+	if(name==gmenu2x->tr["sharpness"]) {
+    setValue(gmenu2x->readsharpness());
+  }
+	switch (button) {
+		case InputManager::LEFT:
+			dec();
+			break;
+		case InputManager::RIGHT:
+			inc();
+			break;
+		case InputManager::ALTLEFT:
+			setValue(value() - 1 );
+			break;
+		case InputManager::ALTRIGHT:
+			setValue(value() + 1 );
+			break;
+		default:
+			return false;
+	}
+	
+	
   // Brightness is changed in real time
   if(name==gmenu2x->tr["Brightness"]) {
     gmenu2x->writeBrightConfig(value());
   }
+	// sharpness is changed in real time
+  if(name==gmenu2x->tr["sharpness"]) {
+    gmenu2x->writesharpness(value());
+  }
+	
 
 	return true;
 }
