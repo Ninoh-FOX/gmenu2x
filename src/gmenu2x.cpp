@@ -505,21 +505,22 @@ void GMenu2X::readConfig(string conffile) {
 	if (confStr["skin"].empty() || SurfaceCollection::getSkinPath(confStr["skin"]).empty())
 		confStr["skin"] = "Default";
 
-	evalIntConf( confInt, "outputLogs", 0, 0,1 );
+	evalIntConf( confInt, "outputLogs", 0, 0, 1 );
 #ifdef ENABLE_CPUFREQ
 	evalIntConf( confInt, "maxClock",
 				 cpuFreqSafeMax, cpuFreqMin, cpuFreqMax );
 	evalIntConf( confInt, "menuClock",
 				 cpuFreqMenuDefault, cpuFreqMin, cpuFreqSafeMax );
 #endif
-	evalIntConf( confInt, "backlightTimeout", 15, 0,120 );
+	evalIntConf( confInt, "backlightTimeout", 15, 0, 120 );
 	evalIntConf( confInt, "buttonRepeatRate", 10, 0, 20 );
 	evalIntConf( confInt, "videoBpp", 32, 16, 32 );
 	evalIntConf( confInt, "previewType", 1, 1, 2);
 	evalIntConf( confInt, "opacity", 128, 0, 255);
 	evalIntConf( confInt, "brightness", readBrightConfig(), 15, 255); /* 255/15= 17 divisiones/pulsaciones */
+	evalIntConf( confInt, "sharpness", readsharpness(), 1, 32 );
 #ifdef SDL_STICK_ENABLED
-	evalIntConf( confInt, "enableStick", 1, 0,1 );
+	evalIntConf( confInt, "enableStick", 1, 0, 1 );
 #endif
 
 	if (confStr["tvoutEncoding"] != "PAL") confStr["tvoutEncoding"] = "NTSC";
@@ -643,6 +644,43 @@ void GMenu2X::writeBrightConfig(int brightval) {
 	if (brightHandle && brightval>=15 && brightval<=255) {
 		fprintf(brightHandle, "%d", brightval);
 		fclose(brightHandle);
+	}
+}
+
+int GMenu2X::readsharpness() {
+	int sharpnessval=0;
+	FILE *sharpnessHandle = NULL;
+	FILE *sharpnessHandle2 = NULL;
+
+	sharpnessHandle = fopen("/sys/devices/platform/jz-lcd.0/sharpness_downscaling", "r");
+	if (sharpnessHandle) {
+		fscanf(sharpnessHandle, "%d", &sharpnessval);
+		fclose(sharpnessHandle);
+	}
+	
+	sharpnessHandle2 = fopen("/sys/devices/platform/jz-lcd.0/sharpness_upscaling", "r");
+	if (sharpnessHandle2) {
+		fscanf(sharpnessHandle2, "%d", &sharpnessval);
+		fclose(sharpnessHandle2);
+	}
+
+	return sharpnessval;
+}
+
+void GMenu2X::writesharpness(int sharpnessval) {
+	FILE *sharpnessHandle = NULL;
+	FILE *sharpnessHandle2 = NULL;
+
+	sharpnessHandle = fopen("/sys/devices/platform/jz-lcd.0/sharpness_downscaling", "w");
+	if (sharpnessHandle && sharpnessval>=1 && sharpnessval<=32) {
+		fprintf(sharpnessHandle, "%d", sharpnessval);
+		fclose(sharpnessHandle);
+	}
+	
+	sharpnessHandle2 = fopen("/sys/devices/platform/jz-lcd.0/sharpness_upscaling", "w");
+	if (sharpnessHandle2 && sharpnessval>=1 && sharpnessval<=32) {
+		fprintf(sharpnessHandle2, "%d", sharpnessval);
+		fclose(sharpnessHandle2);
 	}
 }
 
@@ -786,10 +824,10 @@ void GMenu2X::showSettings() {
 			this, ts, tr["Screen Timeout"],
 			tr["Set screen's backlight timeout in seconds"],
 			&confInt["backlightTimeout"], 0, 120)));
-	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingInt(
-			this, ts, tr["Button repeat rate"],
-			tr["Set button repetitions per second"],
-			&confInt["buttonRepeatRate"], 0, 20)));
+//	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingInt(
+//			this, ts, tr["Button repeat rate"],
+//			tr["Set button repetitions per second"],
+//			&confInt["buttonRepeatRate"], 0, 20)));
 	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingInt(
 			this, ts, tr["Preview type"],
 			tr["Type of preview images"],
@@ -802,6 +840,10 @@ void GMenu2X::showSettings() {
 			this, ts, tr["Brightness"],
 			tr["Screen brightness"],
 			&confInt["brightness"], 15, 255, 15)));
+	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingInt(
+			this, ts, tr["sharpness"],
+			tr["Screen sharpness"],
+			&confInt["sharpness"], 1, 32, 1)));
 #ifdef SDL_STICK_ENABLED
 	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingBool(
 			this, ts, tr["Stick enabled"],
