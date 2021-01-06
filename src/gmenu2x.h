@@ -151,7 +151,11 @@ public:
 	// Brightness
   int readBrightConfig();
 	void writeBrightConfig(int brightval);
-
+	
+	// sharpness
+  int readsharpness();
+	void writesharpness(int sharpnessval);
+	
 	//Configuration hashes
 	ConfStrHash confStr, skinConfStr;
 	ConfIntHash confInt, skinConfInt;
