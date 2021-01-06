@@ -338,3 +338,6 @@ CPU clock frequency for this link=このリンクのCPUクロック周波数
 Must be enabled for console-based applications=コンソールベースのアプリケーションでは有効にする必要があります
 Enable analogic stick in menus=メニューでアナログスティックを有効にする
 Stick enabled=スティック対応
+sharpness=シャープネス
+Screen sharpness=画面の鮮明さ
+

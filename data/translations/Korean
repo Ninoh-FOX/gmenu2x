@@ -169,3 +169,5 @@ START: Show options menu=START 버튼 : 옵션 메뉴 표시
 Change keys=변경 키
 Brightness=밝기
 Screen brightness=화면 밝기
+sharpness=날카로움
+Screen sharpness=화면 선명도

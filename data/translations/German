@@ -128,3 +128,6 @@ Tweak RAM Timings=Schnellere RAM-Timings
 This usually speeds up the application at the cost of stability=Kann Anwendung beschleunigen, auf Kosten der Stabilität
 Gamma (default: 0)=Gamma (Standard: 0)
 Gamma value to set when launching this link=Bein Starten dieses Links benutzter Gamma-Wert
+sharpness=Schärfe
+Screen sharpness=Bildschirmschärfe
+

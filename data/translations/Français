@@ -104,3 +104,5 @@ START: Show options menu=START: Afficher le menu d'options
 Show manual of $1=Afficher le manuel de $1
 Wallpaper selection=Sélection du fond d'écran
 Select a wallpaper from the list=Choisir un fond d'écran de la liste
+sharpness=Netteté
+Screen sharpness=Netteté de l'écran

@@ -128,3 +128,5 @@ Gamma (default: 0)=Gama (aurrezarritakoa: 0)
 Gamma value to set when launching this link=Esteka hau abiarazteko erabiltzen den gama balioa
 Wrapper=Itzuli
 Explicitly relaunch GMenu2X after this link's execution ends=Amaitzerakoan gmenu2x birkargatu
+sharpness=zorroztasuna
+Screen sharpness=pantailaren zorroztasuna

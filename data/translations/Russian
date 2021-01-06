@@ -130,4 +130,6 @@ Tweak RAM Timings=Изменение параметров RAM
 This usually speeds up the application at the cost of stability=Это обычно убыстряет приложение
 Gamma (default: 0)=Гамма (стандарт: 0)
 Gamma value to set when launching this link=Значение гаммы при запуске этой ссылки
+sharpness=Четкость
+Screen sharpness=резкость экрана
 
