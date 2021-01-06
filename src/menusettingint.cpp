@@ -98,10 +98,10 @@ bool MenuSettingInt::handleButtonPress(InputManager::Button button)
 			inc();
 			break;
 		case InputManager::ALTLEFT:
-			setValue(value() - 10 * increment);
+			setValue(value() - 10 );
 			break;
 		case InputManager::ALTRIGHT:
-			setValue(value() + 10 * increment);
+			setValue(value() + 10 );
 			break;
 		default:
 			return false;
