@@ -39,7 +39,7 @@ class LinkApp : public Link {
 private:
 	std::string sclock;
 	int iclock;
-	std::string exec, params, workdir, manual, selectordir, selectorfilter;
+	std::string exec, params, workdir, manual, selectordir, selectorfilter, selectorfile;
 	bool selectorbrowser, deletable, editable;
 
 	std::string file;
@@ -84,6 +84,8 @@ public:
 	void setSelectorBrowser(bool value);
 	const std::string &getSelectorFilter();
 	void setSelectorFilter(const std::string &selectorfilter);
+	const std::string &getSelectorFile();
+	void setSelectorFile(const std::string &selectorfile);
 
 	int clock();
 	const std::string &clockStr(int maxClock);

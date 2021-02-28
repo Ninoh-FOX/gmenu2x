@@ -47,6 +47,21 @@ Selector::Selector(GMenu2X *gmenu2x, LinkApp& link, const string &selectorDir)
 	if (dir[dir.length()-1]!='/') dir += "/";
 }
 
+int Selector::searchFile(const std::string &file, FileLister &fl) {
+  unsigned int idx=0;
+
+  if(fl.getFiles().size()>0) {
+    for(idx=0; idx<fl.getFiles().size(); idx++) {
+      if(fl.getFiles()[idx]==file) {
+        break;
+      }    }
+    if(idx>=fl.getFiles().size())
+      idx=0;
+  }
+
+  return idx+1;
+}
+
 int Selector::exec(int startSelection) {
 	const bool showDirectories = link.getSelectorBrowser();
 
@@ -57,6 +72,9 @@ int Selector::exec(int startSelection) {
 		// The given directory could not be opened; try parent.
 		dir = parentDir(dir);
 	}
+
+  if(link.getSelectorFile().size()>0)
+    startSelection=searchFile(link.getSelectorFile(),fl);
 
 	OffscreenSurface bg(*gmenu2x->bg);
 	drawTitleIcon(bg, link.getIconPath(), true);

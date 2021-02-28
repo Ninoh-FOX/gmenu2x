@@ -47,6 +47,7 @@ public:
 	Selector(GMenu2X *gmenu2x, LinkApp& link,
 			const std::string &selectorDir = "");
 
+  int searchFile(const std::string &file, FileLister &fl);
 	int exec(int startSelection = 0);
 
 	const std::string &getFile() { return file; }
