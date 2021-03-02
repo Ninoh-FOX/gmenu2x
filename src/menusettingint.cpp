@@ -97,11 +97,11 @@ bool MenuSettingInt::handleButtonPress(InputManager::Button button)
 		case InputManager::RIGHT:
 			inc();
 			break;
-		case InputManager::ALTLEFT:
-			setValue(value() - 10 );
+		case InputManager::ALTLEFT:// esto hace que el valor entero sea 5
+			setValue(value() - 4 );
 			break;
 		case InputManager::ALTRIGHT:
-			setValue(value() + 10 );
+			setValue(value() + 4 );
 			break;
 		default:
 			return false;

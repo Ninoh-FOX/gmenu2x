@@ -540,7 +540,7 @@ void GMenu2X::readConfig(string conffile) {
 	evalIntConf( confInt, "videoBpp", 32, 16, 32 );
 	evalIntConf( confInt, "previewType", 1, 1, 2);
 	evalIntConf( confInt, "opacity", 128, 0, 255);
-	evalIntConf( confInt, "brightness", readBrightConfig(), 15, 255); /* 255/15= 17 divisiones/pulsaciones */
+	evalIntConf( confInt, "brightness", readBrightConfig(), 5, 250); /* 250/5= 51 con R/L - 250/10= 25 con dpad divisiones/pulsaciones */
 	evalIntConf( confInt, "sharpness", readsharpness(), 1, 32 );
 #ifdef SDL_STICK_ENABLED
 	evalIntConf( confInt, "enableStick", 1, 0, 1 );
@@ -664,7 +664,7 @@ void GMenu2X::writeBrightConfig(int brightval) {
 	FILE *brightHandle = NULL;
 
 	brightHandle = fopen("/sys/class/backlight/pwm-backlight/brightness", "w");
-	if (brightHandle && brightval>=15 && brightval<=255) {
+	if (brightHandle && brightval>=5 && brightval<=250) {
 		fprintf(brightHandle, "%d", brightval);
 		fclose(brightHandle);
 	}
@@ -862,7 +862,7 @@ void GMenu2X::showSettings() {
 	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingInt(
 			this, ts, tr["Brightness"],
 			tr["Screen brightness"],
-			&confInt["brightness"], 15, 255, 15)));
+			&confInt["brightness"], 5, 250, 5)));
 	sd.addSetting(unique_ptr<MenuSetting>(new MenuSettingInt(
 			this, ts, tr["sharpness"],
 			tr["Screen sharpness"],
