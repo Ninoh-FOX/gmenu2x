@@ -151,6 +151,7 @@ public:
 	// Brightness
   int readBrightConfig();
 	void writeBrightConfig(int brightval);
+	int readMaxBright();
 	
 	// sharpness
   int readsharpness();
