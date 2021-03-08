@@ -82,7 +82,7 @@ void PowerSaver::removeScreenTimer() {
 #define SCREEN_BLANK_PATH "/sys/class/graphics/fb0/blank"
 void PowerSaver::setScreenBlanking(bool state) {
 	const char *path = SCREEN_BLANK_PATH;
-	const char *blank = state ? "0" : "1";
+	const char *blank = state ? "0" : "4";
 
 	int fd = open(path, O_RDWR);
 	if (fd == -1) {
